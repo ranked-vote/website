@@ -14,11 +14,13 @@
   export let elections;
 </script>
 
+<title>ranked.vote: detailed reports on ranked-choice elections.</title>
+
 <div class="row">
   <div class="leftCol">
     <p class="description">
-      <strong>ranked.vote</strong>
-      : detailed reports on ranked-choice elections.
+      <strong>ranked.vote</strong>:
+      detailed reports on ranked-choice elections.
     </p>
     <p>
       Ranked-choice elections produce more data on voter preferences than

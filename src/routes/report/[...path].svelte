@@ -11,9 +11,9 @@
   // TODO: this could be a TS script once this Sapper issue is closed:
   // https://github.com/sveltejs/sapper/pull/1222
   export let report;
+  import Report from "../../components/Report.svelte";
 </script>
 
-<div class="row">
-  <div class="leftCol">t2</div>
-  <div class="rightCol">t1</div>
-</div>
+<title>ranked.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(0, 4)}</title>
+
+<Report {report} />
