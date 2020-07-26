@@ -30,12 +30,12 @@ export const client = {
 			emitCss: true,
 			preprocess: autoPreprocess()
 		}),
-		typescript(),
 		resolve({
 			browser: true,
 			dedupe: ['svelte']
 		}),
 		commonjs(),
+		typescript(),
 
 		legacy && babel({
 			extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -73,13 +73,14 @@ export const server = {
 		}),
 		svelte({
 			generate: 'ssr',
-			dev
+			dev,
+			preprocess: autoPreprocess()
 		}),
-		typescript(),
 		resolve({
 			dedupe: ['svelte']
 		}),
-		commonjs()
+		commonjs(),
+		typescript(),
 	],
 	external: Object.keys(pkg.dependencies).concat(
 		require('module').builtinModules || Object.keys(process.binding('natives'))

@@ -1,22 +1,23 @@
 <script context="module">
   export async function preload(page, session) {
-    let result = await this.fetch('/api/reports.json')
-    let index = await result.json()
-    return index
+    let result = await this.fetch("/api/reports.json");
+    let index = await result.json();
+    return index;
   }
 </script>
 
-<script>
-  export let elections;
+<script lang="ts">
+  import type { IElectionIndexEntry } from "../report_types";
+  import ElectionIndex from "../components/ElectionIndex.svelte";
 
-  import ElectionIndex from '../../components/ElectionIndex.svelte'
+  export let elections: IElectionIndexEntry[];
 </script>
 
 <div class="row">
   <div class="leftCol">
     <p class="description">
-      <strong>ranked.vote</strong>:
-      detailed reports on ranked-choice elections.
+      <strong>ranked.vote</strong>
+      : detailed reports on ranked-choice elections.
     </p>
     <p>
       Ranked-choice elections produce more data on voter preferences than

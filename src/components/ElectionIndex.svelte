@@ -1,6 +1,7 @@
 <script type="ts">
-  import Index from "../routes/index.svelte";
-  export let elections;
+  import type { IElectionIndexEntry } from "../report_types";
+
+  export let elections: IElectionIndexEntry[];
 
   let electionsByYear = new Map();
 
@@ -17,7 +18,7 @@
   <div class="yearSection">
     <h2>{year}</h2>
     <div class="electionSection">
-    {#each elections as election}
+      {#each elections as election}
         <div class="electionHeader">
           <h3>
             <strong>{election.jurisdictionName}</strong>
@@ -25,22 +26,22 @@
           </h3>
         </div>
         {#each election.contests as contest}
-        <div class="race">
-          <a href="/">
-            <div class="title">
-              <strong>{contest.officeName}</strong>
-              {contest.winner}
-            </div>
-            <div class="meta">
-              <strong>{contest.numCandidates}</strong>
-              candidates,
-              <strong>{contest.numRounds}</strong>
-              rounds
-            </div>
-          </a>
-        </div>
+          <div class="race">
+            <a href="/{election.path}/{contest.office}">
+              <div class="title">
+                <strong>{contest.officeName}</strong>
+                {contest.winner}
+              </div>
+              <div class="meta">
+                <strong>{contest.numCandidates}</strong>
+                candidates,
+                <strong>{contest.numRounds}</strong>
+                rounds
+              </div>
+            </a>
+          </div>
         {/each}
-    {/each}
-  </div>
+      {/each}
+    </div>
   </div>
 {/each}
