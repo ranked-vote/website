@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    border-top: 5px solid #aa0d0d;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #555;
+    font-size: 11pt;
+}
+
+p {
+    margin: 16px 0;
+    line-height: 1.4;
+}
+
+.description {
+    font-size: 16pt;
+    color: black;
+}
+
+a {
+    color: #aa0d0d;
+    text-decoration: none;
+}
+
+.row {
+    max-width: 1000px;
+    margin: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftCol {
+    flex: 1;
+}
+
+.rightCol {
+    flex: 2;
+    margin-left: 15px;
+}
+
+h2 {
+    margin: 16px 50px;
+    font-size: 16pt;
+    color: #937A7A;
+}
+
+h3 {
+    margin: 16px 0 0 0;
+    font-size: 16pt;
+    font-weight: normal;
+    color: #937A7A;
+}
+
+h3 strong {
+    color: #aa0d0d;
+}
+
+.meta {
+    color: #937A7A;
+}
+
+.yearSection {
+    display: flex;
+}
+
+.electionHeader {
+    /*
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    */
+    margin-bottom: 16px;
+    margin-top: 22px;
+    padding: 0 5px;
+}
+
+.electionHeader:first-child {
+    margin-top: 0;
+}
+
+.yearSection {
+    margin-top: 16px;
+}
+
+.yearSection:first-child {
+    margin-top: 0;
+}
+
+.electionSection {
+    flex: 1;
+}
+
+.race a {
+    display: flex;
+    color: #937A7A;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.race a:hover {
+    background: #eee;
+}
+
+.race a .meta {
+    text-align: right;
+    flex: 1;
+}
+
+.race a .title strong {
+    color: black;
+}
