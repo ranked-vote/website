@@ -3,7 +3,7 @@
 
   export let elections: IElectionIndexEntry[];
 
-  let electionsByYear = new Map();
+  let electionsByYear = new Map<string, IElectionIndexEntry[]>();
 
   elections.forEach((e) => {
     let year = e.date.substr(0, 4);
@@ -27,7 +27,7 @@
         </div>
         {#each election.contests as contest}
           <div class="race">
-            <a href="/{election.path}/{contest.office}">
+            <a href="/report/{election.path}/{contest.office}">
               <div class="title">
                 <strong>{contest.officeName}</strong>
                 {contest.winner}

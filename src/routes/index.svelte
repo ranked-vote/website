@@ -6,11 +6,12 @@
   }
 </script>
 
-<script lang="ts">
-  import type { IElectionIndexEntry } from "../report_types";
+<script>
+  // TODO: this could be a TS script once this Sapper issue is closed:
+  // https://github.com/sveltejs/sapper/pull/1222
   import ElectionIndex from "../components/ElectionIndex.svelte";
 
-  export let elections: IElectionIndexEntry[];
+  export let elections;
 </script>
 
 <div class="row">
