@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 body {
-    margin: 0;
+    margin: 0 0 40px 0;
     padding: 0;
     border-top: 5px solid #aa0d0d;
     font-family: 'Source Sans Pro', sans-serif;
@@ -41,7 +41,7 @@ a {
 }
 
 h2 {
-    margin: 16px 50px;
+    margin: 16px 25px 0 35px;
     font-size: 16pt;
     color: #937A7A;
 }

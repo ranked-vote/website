@@ -1,5 +1,5 @@
 <script type="ts">
-  import Index from "../index.svelte";
+  import Index from "../routes/index.svelte";
   export let elections;
 
   let electionsByYear = new Map();
@@ -16,10 +16,8 @@
 {#each [...electionsByYear] as [year, elections]}
   <div class="yearSection">
     <h2>{year}</h2>
-
     <div class="electionSection">
     {#each elections as election}
-      
         <div class="electionHeader">
           <h3>
             <strong>{election.jurisdictionName}</strong>

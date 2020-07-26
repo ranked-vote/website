@@ -9,7 +9,7 @@
 <script>
   export let elections;
 
-  import ElectionIndex from './components/ElectionIndex.svelte'
+  import ElectionIndex from '../../components/ElectionIndex.svelte'
 </script>
 
 <div class="row">
