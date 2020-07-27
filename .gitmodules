@@ -1,0 +1,3 @@
+[submodule "reports"]
+	path = reports
+	url = git@github.com:ranked-vote/reports.git
