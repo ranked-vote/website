@@ -1,14 +1,68 @@
 <script type="ts">
-  import type { IContestReport } from "../report_types";
+  import type { IContestReport, IAllocatee, ICandidate } from "../report_types";
+  import VoteCounts from "./report_components/VoteCounts.svelte";
+  import { onMount, setContext } from "svelte";
 
   export let report: IContestReport;
+
+  function getCandidate(cid: IAllocatee): ICandidate {
+    if (cid == "X") {
+      return { name: "Exhausted", writeIn: false };
+    } else {
+      return report.candidates[cid];
+    }
+  }
+
+  setContext("candidates", {
+    getCandidate,
+  });
+
+  function formatDate(dateStr: string): string {
+    let date = new Date(dateStr);
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "Decemner",
+    ];
+
+    return `${
+      months[date.getUTCMonth()]
+    } ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+  }
 </script>
 
 <div class="row">
-  <div class="leftCol">
-    <p class="description">
-      <strong>{report.info.name}</strong>
-    </p>
+  <p class="description" />
+  <div class="electionHeader">
+    <h3>
+      <strong>{report.info.jurisdictionName}</strong>
+      {report.info.officeName}
+    </h3>
   </div>
-  <div class="rightCol">t1</div>
+</div>
+
+<div class="row">
+  <div class="leftCol">
+    The {report.info.jurisdictionName} {report.info.electionName} was held on
+    <strong>{formatDate(report.info.date)}</strong>
+    .
+    <strong>{report.candidates[report.winner].name}</strong>
+    was the winner out of
+    <strong>{report.numCandidates}</strong>
+    candidates after
+    <strong>{report.rounds.length}</strong>
+    elimination rounds.
+  </div>
+  <div class="rightCol">
+    <VoteCounts candidateVotes={report.totalVotes} />
+  </div>
 </div>

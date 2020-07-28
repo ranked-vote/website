@@ -31,6 +31,16 @@ export interface IContestReport {
     ballotCount: number
     candidates: ICandidate[]
     rounds: ITabulatorRound[]
+    winner: CandidateId
+    numCandidates: number
+    totalVotes: ICandidateVotes[]
+}
+
+export interface ICandidateVotes {
+    candidate: CandidateId
+    firstRoundVotes: number
+    transferVotes: number
+    roundEliminated?: number
 }
 
 export interface IElectionInfo {
