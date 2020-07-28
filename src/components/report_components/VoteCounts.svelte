@@ -11,13 +11,13 @@
 
   const { getCandidate } = getContext("candidates") as CandidateContext;
 
-  const outerHeight = 22;
-  const innerHeight = 10;
+  const outerHeight = 24;
+  const innerHeight = 14;
   const labelSpace = 130;
   const width = 400;
 
   const maxVotes = Math.max(...candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
-  const scale = width / maxVotes;
+  const scale = (width - labelSpace - 5) / maxVotes;
   console.log(maxVotes, candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
 
   const height = outerHeight * candidateVotes.length;
@@ -38,7 +38,7 @@
   }
 </style>
 
-<svg {height} width="100%">
+<svg {height} width="100%" viewBox={`0 0 ${width} ${height}`}>
   <g transform={`translate(${labelSpace} 0)`}>
     {#each candidateVotes as votes, i}
       <g
