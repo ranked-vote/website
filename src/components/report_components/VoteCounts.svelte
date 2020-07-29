@@ -18,7 +18,6 @@
 
   const maxVotes = Math.max(...candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
   const scale = (width - labelSpace - 5) / maxVotes;
-  console.log(maxVotes, candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
 
   const height = outerHeight * candidateVotes.length;
 </script>
@@ -44,7 +43,7 @@
       <g
         class={votes.roundEliminated === null ? '' : 'eliminated'}
         transform={`translate(0 ${outerHeight * (i + 0.5)})`}>
-        <text font-size="12" text-anchor="end" alignment-baseline="middle">
+        <text font-size="12" text-anchor="end" dominant-baseline="middle">
           {getCandidate(votes.candidate).name}
         </text>
         <g transform={`translate(5 ${-innerHeight / 2 - 1})`}>
@@ -61,7 +60,7 @@
         {#if votes.roundEliminated !== null}
             <text
             font-size="12"
-            alignment-baseline="middle"
+            dominant-baseline="middle"
             x={10 + scale * (votes.firstRoundVotes + votes.transferVotes)}>
             Eliminated in round {votes.roundEliminated}
             </text>

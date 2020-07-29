@@ -52,15 +52,18 @@
 
 <div class="row">
   <div class="leftCol">
-    The {report.info.jurisdictionName} {report.info.electionName} was held on
-    <strong>{formatDate(report.info.date)}</strong>
-    .
-    <strong>{report.candidates[report.winner].name}</strong>
-    was the winner out of
-    <strong>{report.numCandidates}</strong>
-    candidates after
-    <strong>{report.rounds.length}</strong>
-    elimination rounds.
+    <p>
+      The {report.info.jurisdictionName} {report.info.electionName} was held on
+      <strong>{formatDate(report.info.date)}</strong>.
+    </p>
+    <p>
+      <strong>{report.candidates[report.winner].name}</strong>
+      was the winner out of
+      <strong>{report.numCandidates}</strong>
+      candidates after
+      <strong>{report.rounds.length}</strong>
+      elimination rounds.
+    </p>
   </div>
   <div class="rightCol">
     <VoteCounts candidateVotes={report.totalVotes} />
