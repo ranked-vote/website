@@ -16,4 +16,6 @@
 
 <title>ranked.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(0, 4)}</title>
 
+<div class="wide container">
 <Report {report} />
+</div>

@@ -16,12 +16,13 @@
 
 <title>ranked.vote: detailed reports on ranked-choice elections.</title>
 
+<div class="wide container">
 <div class="row">
   <div class="leftCol">
-    <p class="description">
-      <strong>ranked.vote</strong>:
+    <div class="description">
+      <h1>ranked.vote</h1>:
       detailed reports on ranked-choice elections.
-    </p>
+    </div>
     <p>
       Ranked-choice elections produce more data on voter preferences than
       traditional pick-one elections.
@@ -38,14 +39,13 @@
 
     <p>
       ranked.vote is a project of
-      <a href="/">Paul Butler</a>
-      and may be freely reproduced under
-      <a href="/">CC BY</a>
-      terms.
+      <a href="/">Paul Butler</a>.
+      For more information, see <a href="/about">the about page</a>.
     </p>
   </div>
 
   <div class="rightCol">
     <ElectionIndex {elections} />
   </div>
+</div>
 </div>

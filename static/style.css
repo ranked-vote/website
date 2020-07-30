@@ -10,10 +10,10 @@ body {
 
 /* Layout */
 
-.row {
+.container {
+    margin: 20px auto;
     max-width: 600px;
-    margin: auto;
-    padding: 0 20px;
+    padding: 0 12px;
 }
 
 .yearSection h2 {
@@ -24,25 +24,22 @@ body {
     display: block;
 }
 
-.leftCol :first-child {
-    margin-top: 0;
-}
-
 @media (min-width: 1100px) {
-    .row {
+    .container.wide {
         max-width: 1000px;
-        margin: auto;
-        padding: 12px;
+    }
+
+    .row {
         display: flex;
         flex-direction: row;
     }
     
     .leftCol {
-        flex: 1;
+        width: 300px;
     }
     
     .rightCol {
-        flex: 2;
+        width: 700px;
         margin-left: 15px;
     }
 
@@ -55,6 +52,10 @@ body {
     }
 }
 
+.rightCol :first-child, .leftCol :first-child {
+    margin-top: 0;
+}
+
 /* Style */
 
 p {
@@ -62,10 +63,14 @@ p {
     line-height: 1.4;
 }
 
-.leftCol p.description {
+.description {
     font-size: 16pt;
     color: black;
-    margin-top: 16px;
+}
+
+.description h1 {
+    display: inline;
+    font-size: 16pt;
 }
 
 a {
@@ -74,13 +79,13 @@ a {
 }
 
 h2 {
-    margin: 16px 0 0 0;
+    margin: 0;
     font-size: 16pt;
     color: #937A7A;
 }
 
 h3 {
-    margin: 16px 0 0 0;
+    margin: 0;
     font-size: 16pt;
     font-weight: normal;
     color: #937A7A;
@@ -98,8 +103,8 @@ h3 strong {
     display: flex;
 }
 
-.electionHeader {
-    margin-bottom: 16px;
+.rightCol .electionHeader {
+    margin-bottom: 10px;
     margin-top: 22px;
     padding: 0;
 }
@@ -109,7 +114,7 @@ h3 strong {
 }
 
 .yearSection {
-    margin-top: 16px;
+    margin-top: 22px;
 }
 
 .yearSection:first-child {
