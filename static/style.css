@@ -24,6 +24,10 @@ body {
     display: block;
 }
 
+.row {
+    margin-bottom: 30px;
+}
+
 @media (min-width: 1100px) {
     .container.wide {
         max-width: 1000px;

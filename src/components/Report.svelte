@@ -61,7 +61,7 @@
       was the winner out of
       <strong>{report.numCandidates}</strong>
       candidates after
-      <strong>{report.rounds.length}</strong>
+      <strong>{report.rounds.length - 1}</strong>
       elimination rounds.
     </p>
   </div>

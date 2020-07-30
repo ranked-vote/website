@@ -23,8 +23,8 @@
 
 <p>
   ranked.vote was created and is maintained by
-  <a href="https://paulbutler.org">Paul Butler</a>
-  . It is non-partisan and has received no outside funding.
+  <a href="https://paulbutler.org">Paul Butler</a>.
+  It is non-partisan and has received no outside funding.
 </p>
 
 <h2>License</h2>
