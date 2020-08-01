@@ -39,12 +39,12 @@ body {
     }
     
     .leftCol {
-        width: 300px;
+        width: 350px;
     }
     
     .rightCol {
-        width: 700px;
-        margin-left: 15px;
+        width: 650px;
+        margin-left: 40px;
     }
 
     .title strong {

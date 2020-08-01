@@ -32,8 +32,24 @@ export interface IContestReport {
     candidates: ICandidate[]
     rounds: ITabulatorRound[]
     winner: CandidateId
+    condorcet?: CandidateId
+    smithSet: CandidateId[]
     numCandidates: number
     totalVotes: ICandidateVotes[]
+    pairwisePreferences: ICandidatePairTable
+    firstAlternate: ICandidatePairTable
+    firstFinal: ICandidatePairTable
+}
+
+export interface ICandidatePairTable {
+    rows: Allocatee[]
+    cols: Allocatee[]
+    entries: CandidatePairEntry[][]
+}
+
+export interface CandidatePairEntry {
+    frac: number
+    count: number
 }
 
 export interface ICandidateVotes {

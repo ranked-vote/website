@@ -17,7 +17,7 @@
   const width = 600;
 
   const maxVotes = Math.max(...candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
-  const scale = (width - labelSpace - 5) / maxVotes;
+  const scale = (width - labelSpace - 15) / maxVotes;
 
   const height = outerHeight * candidateVotes.length;
 </script>
