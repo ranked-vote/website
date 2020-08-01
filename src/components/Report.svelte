@@ -59,10 +59,7 @@
   <div class="leftCol">
     <p>
       The {report.info.jurisdictionName} {report.info.electionName} was held on
-      <strong>{formatDate(report.info.date)}</strong>
-      .
-    </p>
-    <p>
+      <strong>{formatDate(report.info.date)}</strong>.
       <strong>{report.candidates[report.winner].name}</strong>
       was the winner out of <strong>{report.numCandidates}</strong>&nbsp;candidates
       {#if report.rounds.length > 1}
