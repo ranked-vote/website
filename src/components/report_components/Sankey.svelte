@@ -90,14 +90,16 @@
         transfers.push(
           new TransferBlock(
             last.xOffset,
-            offset,
+            (allocation.allocatee === 'X') ? offset + width - last.width : offset,
             last.width,
             (i - 1) * roundHeight + voteBlockHeight,
             i * roundHeight
           )
         );
 
-        accountedIn = last.width;
+        if (allocation.allocatee !== 'X') {
+            accountedIn = last.width;
+        }
       }
 
       curVotes.set(allocation.allocatee, {
