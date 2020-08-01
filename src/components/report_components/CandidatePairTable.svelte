@@ -14,7 +14,7 @@
   }
 
   let maxFrac = Math.max(
-    ...data.entries.map((row) => Math.max(...row.map((d) => d?.frac || 0)))
+    ...data.entries.map((row) => Math.max(...row.map((d) => (d ? d.frac : 0))))
   );
 
   function fracToColor(frac: number): string {
@@ -97,7 +97,7 @@
         {/if}
         <td class="rowLabel">{getCandidate(row).name}</td>
         {#each data.entries[i] as entry}
-          <td class="entry" style={`background: ${fracToColor(entry?.frac)}`}>
+          <td class="entry" style={entry ? `background: ${fracToColor(entry.frac)}` : null}>
             {#if entry}{Math.round(entry.frac * 1000) / 10}%{/if}
           </td>
         {/each}
