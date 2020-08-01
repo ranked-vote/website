@@ -45,14 +45,17 @@
 
     toPath(): string {
       let midY = (this.r1y + this.r2y) / 2;
+      let width = Math.max(1, this.width);
+      let {r1y, r2y, r1x, r2x} = this;
+      r1x = r1x - Math.min(width - this.width, 0);
+      let r1x2 = r1x + width;
+      let r2x2 = r2x + width;
       return `
-            M ${this.r1x} ${this.r1y}
-            H ${this.r1x + this.width}
-            C ${this.r1x + this.width} ${midY} ${
-        this.r2x + this.width
-      } ${midY} ${this.r2x + this.width} ${this.r2y}
-            H ${this.r2x}
-            C ${this.r2x} ${midY} ${this.r1x} ${midY} ${this.r1x} ${this.r1y}
+            M ${r1x} ${r1y}
+            H ${r1x2}
+            C ${r1x2} ${midY} ${r2x2} ${midY} ${r2x2} ${r2y}
+            H ${r2x}
+            C ${r2x} ${midY} ${r1x} ${midY} ${r1x} ${r1y}
             Z
         `;
     }
@@ -169,7 +172,7 @@
           class={voteBlock.allocatee == 'X' ? 'voteBlock exhausted' : 'voteBlock'}
           y={voteBlock.y}
           x={voteBlock.x}
-          width={voteBlock.width}
+          width={Math.max(1, voteBlock.width)}
           height={voteBlockHeight} />
       {/each}
     {/each}

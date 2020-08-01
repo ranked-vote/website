@@ -63,7 +63,7 @@
       was the winner out of
       <strong>{report.numCandidates}</strong>
       candidates{#if report.rounds.length > 1}
-      after
+      {' '}after
       <strong>{report.rounds.length - 1}</strong>
       elimination rounds.
       {:else}. No elimination rounds were necessary to determine the outcome.

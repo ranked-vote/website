@@ -27,15 +27,6 @@
       Ranked-choice elections produce more data on voter preferences than
       traditional pick-one elections.
     </p>
-    <p>If you’re just browsing around, these are some of my favorites:</p>
-    <ul>
-      <li>
-        <a href="/">2012 San Francisco Mayor</a>
-      </li>
-      <li>
-        <a href="/">2020 Santa Fe Mayor</a>
-      </li>
-    </ul>
 
     <p>
       ranked.vote is a project of
