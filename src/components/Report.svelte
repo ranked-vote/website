@@ -1,6 +1,8 @@
 <script type="ts">
   import type { IContestReport, IAllocatee, ICandidate } from "../report_types";
   import VoteCounts from "./report_components/VoteCounts.svelte";
+  import Sankey from "./report_components/Sankey.svelte";
+
   import { onMount, setContext } from "svelte";
 
   export let report: IContestReport;
@@ -67,5 +69,13 @@
   </div>
   <div class="rightCol">
     <VoteCounts candidateVotes={report.totalVotes} />
+  </div>
+
+  <div class="leftCol">
+    <h2>Sankey</h2>
+  </div>
+
+  <div class="rightCol">
+    <Sankey rounds={report.rounds} />
   </div>
 </div>

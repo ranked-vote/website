@@ -1,5 +1,5 @@
 export type CandidateId = number
-export type IAllocatee = CandidateId | 'X'
+export type Allocatee = CandidateId | 'X'
 
 // index.json
 
@@ -71,12 +71,12 @@ export interface ITabulatorRound {
 }
 
 export interface ITabulatorAllocation {
-    allocatee: IAllocatee
+    allocatee: Allocatee
     votes: number
 }
 
 export interface Transfer {
     from: CandidateId
-    to: IAllocatee
+    to: Allocatee
     count: number
 }
