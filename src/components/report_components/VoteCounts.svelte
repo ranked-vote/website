@@ -14,7 +14,7 @@
   const outerHeight = 24;
   const innerHeight = 14;
   const labelSpace = 130;
-  const width = 400;
+  const width = 600;
 
   const maxVotes = Math.max(...candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
   const scale = (width - labelSpace - 5) / maxVotes;
@@ -37,7 +37,7 @@
   }
 </style>
 
-<svg {height} width="100%" viewBox={`0 0 ${width} ${height}`}>
+<svg width="100%" viewBox={`0 0 ${width} ${height}`}>
   <g transform={`translate(${labelSpace} 0)`}>
     {#each candidateVotes as votes, i}
       <g

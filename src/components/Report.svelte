@@ -70,7 +70,8 @@
   <div class="rightCol">
     <VoteCounts candidateVotes={report.totalVotes} />
   </div>
-
+</div>
+<div class="row">
   <div class="leftCol">
     <h2>Sankey</h2>
   </div>
