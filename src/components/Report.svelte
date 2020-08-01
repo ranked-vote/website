@@ -1,5 +1,5 @@
 <script type="ts">
-  import type { IContestReport, IAllocatee, ICandidate } from "../report_types";
+  import type { IContestReport, Allocatee, ICandidate } from "../report_types";
   import VoteCounts from "./report_components/VoteCounts.svelte";
   import Sankey from "./report_components/Sankey.svelte";
 
@@ -7,7 +7,7 @@
 
   export let report: IContestReport;
 
-  function getCandidate(cid: IAllocatee): ICandidate {
+  function getCandidate(cid: Allocatee): ICandidate {
     if (cid == "X") {
       return { name: "Exhausted", writeIn: false };
     } else {
@@ -46,7 +46,7 @@
   <p class="description" />
   <div class="electionHeader">
     <h3>
-      <strong>{report.info.jurisdictionName}</strong>
+      <a href="/">ranked.vote</a> // <strong>{report.info.jurisdictionName}</strong>
       {report.info.officeName}
     </h3>
   </div>
@@ -62,15 +62,20 @@
       <strong>{report.candidates[report.winner].name}</strong>
       was the winner out of
       <strong>{report.numCandidates}</strong>
-      candidates after
+      candidates{#if report.rounds.length > 1}
+      after
       <strong>{report.rounds.length - 1}</strong>
       elimination rounds.
+      {:else}. No elimination rounds were necessary to determine the outcome.
+      {/if}
     </p>
   </div>
   <div class="rightCol">
     <VoteCounts candidateVotes={report.totalVotes} />
   </div>
 </div>
+
+{#if report.rounds.length > 1}
 <div class="row">
   <div class="leftCol">
     <h2>Sankey</h2>
@@ -80,3 +85,4 @@
     <Sankey rounds={report.rounds} />
   </div>
 </div>
+{/if}

@@ -13,14 +13,14 @@
 
   const outerHeight = 24;
   const width = 600;
-  const roundHeight = 130;
+  const roundHeight = 90;
   const voteBlockHeight = 14;
 
-  const candidateMargin = 40; // px
+  const candidateMargin = 20; // px
   const firstRoundAllocations = rounds[0].allocations;
   const firstRoundNumCandidates = firstRoundAllocations.length - 1;
   const voteScale =
-    (width - candidateMargin * firstRoundNumCandidates) /
+    (width - candidateMargin * firstRoundNumCandidates - 20) /
     firstRoundAllocations.reduce((a, b) => a + b.votes, 0);
 
   const innerHeight = roundHeight * (rounds.length - 1) + voteBlockHeight;
@@ -156,7 +156,7 @@
 </style>
 
 <svg width="100%" viewBox={`0 0 ${width} ${height}`}>
-  <g transform={`translate(0 ${labelSpace})`}>
+  <g transform={`translate(10 ${labelSpace})`}>
     {#each voteBlockRows[0] as voteBlock}
       <g transform={`translate(${voteBlock.x + voteBlock.width / 2} -10)`}>
         <text font-size="12" dominant-baseline="middle" transform="rotate(-90)">{getCandidate(voteBlock.allocatee).name}</text>

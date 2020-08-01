@@ -95,6 +95,11 @@ h3 {
     color: #937A7A;
 }
 
+h3 a {
+    font-weight: bold;
+    color: black;
+}
+
 h3 strong {
     color: #aa0d0d;
 }

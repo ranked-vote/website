@@ -31,9 +31,8 @@
     fill: #e7ada0;
   }
 
-  .eliminated rect,
   .eliminated {
-    fill: #ccc;
+    opacity: 30%;
   }
 </style>
 

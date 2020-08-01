@@ -1,6 +1,6 @@
-import type { ICandidateVotes, IAllocatee, ICandidate } from "../report_types";
+import type { ICandidateVotes, Allocatee, ICandidate } from "../report_types";
 
 export interface CandidateContext {
-    getCandidate: (c: IAllocatee) => ICandidate
+    getCandidate: (c: Allocatee) => ICandidate
 }
 
