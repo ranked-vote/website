@@ -25,7 +25,7 @@
     firstRoundAllocations.reduce((a, b) => a + b.votes, 0);
 
   const innerHeight = roundHeight * (rounds.length - 1) + voteBlockHeight;
-  const labelSpace = 150;
+  const labelSpace = 100;
   const height = 2 * labelSpace + innerHeight;
 
   interface VoteBlock {

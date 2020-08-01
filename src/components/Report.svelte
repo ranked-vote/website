@@ -64,13 +64,9 @@
     </p>
     <p>
       <strong>{report.candidates[report.winner].name}</strong>
-      was the winner out of
-      <strong>{report.numCandidates}</strong>
-      candidates
+      was the winner out of <strong>{report.numCandidates}</strong>&nbsp;candidates
       {#if report.rounds.length > 1}
-        {' '}after
-        <strong>{report.rounds.length - 1}</strong>
-        elimination rounds.
+        {' '}after <strong>{report.rounds.length - 1}</strong>&nbsp;elimination rounds.
       {:else}
         . No elimination rounds were necessary to determine the outcome.
       {/if}
@@ -103,9 +99,9 @@
   <div class="leftCol">
     <h2>Pairwise Preferences</h2>
     <p>
-      For every pair of candidates, this table shows what fraction of voters
-      preferred one to the other. A preference means that either a voter ranks a
-      candidate ahead of the other, or ranks a candidate but does not list the
+      For every pair of candidates, this table shows the fraction of voters
+      who preferred one to the other. A preference means that either a voter ranks a
+      candidate ahead of the other, or ranks one candidate but does not list the
       other. Ballots which list neither candidate are not counted towards the
       percent counts.
     </p>
@@ -134,10 +130,11 @@
   <div class="row">
     <div class="leftCol">
       <h2>Final Vote by First Choice</h2>
+      <p>This table tracks which candidate ballots were ultimately allocated to, for ballots that ranked an eliminated candidate first.</p>
     </div>
 
     <div class="rightCol">
-      <CandidatePairTable data={report.firstFinal} rowLabel="First Choice" colLabel="Final Choice" />
+      <CandidatePairTable data={report.firstFinal} rowLabel="First Round Choice" colLabel="Final Round Choice" />
     </div>
   </div>
 {/if}

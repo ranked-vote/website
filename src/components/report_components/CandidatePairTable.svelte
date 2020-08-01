@@ -19,10 +19,11 @@
 
   function fracToColor(frac: number): string {
     frac = frac / maxFrac;
-    let s = smooth(50, 74, frac);
-    let l = smooth(100, 56, frac);
+    let h = smooth(0, 50, frac);
+    let s = smooth(50, 100, frac);
+    let l = smooth(100, 75, frac);
 
-    return `hsl(0 ${s}% ${l}%)`;
+    return `hsl(${h} ${s}% ${l}%)`;
   }
 </script>
 

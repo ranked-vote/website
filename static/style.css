@@ -25,7 +25,7 @@ body {
 }
 
 .row {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 @media (min-width: 1100px) {
@@ -40,6 +40,10 @@ body {
     
     .leftCol {
         width: 350px;
+    }
+
+    .leftCol p {
+        text-align: justify;
     }
     
     .rightCol {
