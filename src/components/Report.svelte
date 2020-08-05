@@ -66,15 +66,20 @@
     <p>
       The {report.info.jurisdictionName} {report.info.electionName} was held on
       <strong>{formatDate(report.info.date)}</strong>.
-      <strong>{report.candidates[report.winner].name}</strong>
+      <strong>{getCandidate(report.winner).name}</strong>
       was the winner out of
-      <strong>{report.numCandidates}</strong>
-      &nbsp;candidates
+      <strong>{report.numCandidates}</strong>&nbsp;candidates
       {#if report.rounds.length > 1}
         {' '}after
-        <strong>{report.rounds.length - 1}</strong>
-        &nbsp;elimination rounds.
+        <strong>{report.rounds.length - 1}</strong>&nbsp;elimination rounds.
       {:else}. No elimination rounds were necessary to determine the outcome.
+      {/if}
+    </p>
+    <p>
+      {#if report.winner == report.condorcet}
+        <strong>{getCandidate(report.winner).name}</strong> was also the Condorcet winner.
+      {:else}
+        <strong>{getCandidate(report.condorcet).name}</strong> was the Condorcet winner.
       {/if}
     </p>
   </div>
