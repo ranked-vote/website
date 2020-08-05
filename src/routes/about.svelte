@@ -2,7 +2,7 @@
 
 <div class="container">
 <div class="description">
-  <h1>About ranked.vote</h1>
+  <h1>About <a href="/">ranked.vote</a></h1>
 </div>
 
 <p>
@@ -31,7 +31,7 @@
 
 <p>
   This website and the data pipeline behind it (including the tabulator) are
-  open source and liberally licensed. Website content and generated reports may
+  <a href="https://github.com/ranked-vote">open source</a> and liberally licensed. Website content and generated reports may
   be freely distributed with attribution under the CC-BY license.
 </p>
 
