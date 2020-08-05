@@ -41,6 +41,7 @@
   table {
     font-size: 8pt;
     margin: auto;
+    cursor: default;
   }
 
   .colLabel div {

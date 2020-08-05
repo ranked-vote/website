@@ -17,13 +17,13 @@
   const width = 600;
   const roundHeight = 90;
   const voteBlockHeight = 14;
-  const edgeMargin = 40;
+  const edgeMargin = 60;
 
   const candidateMargin = 20; // px
   const firstRoundAllocations = rounds[0].allocations;
   const firstRoundNumCandidates = firstRoundAllocations.length - 1;
   const voteScale =
-    (width - candidateMargin * firstRoundNumCandidates - 2 * edgeMargin) /
+    (width - candidateMargin * firstRoundNumCandidates - edgeMargin) /
     firstRoundAllocations.reduce((a, b) => a + b.votes, 0);
 
   const innerHeight = roundHeight * (rounds.length - 1) + voteBlockHeight;
@@ -224,6 +224,9 @@
 </style>
 
 <svg width="100%" viewBox={`0 0 ${width} ${height}`}>
+  {#each rounds as _, i}
+    <text dominant-baseline="middle" font-size="10" y={i * roundHeight + labelSpace + voteBlockHeight / 2}>Round {i+1}</text>
+  {/each}
   <g transform={`translate(${edgeMargin} ${labelSpace})`}>
     {#each voteBlockRows[0] as voteBlock}
       <g transform={`translate(${voteBlock.x + voteBlock.width / 2} -10)`}>
