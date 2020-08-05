@@ -64,7 +64,13 @@
 <div class="row">
   <div class="leftCol">
     <p>
-      The {report.info.jurisdictionName} {report.info.electionName} was held on
+      The
+      {#if report.info.website}
+      <a href={report.info.website}>{report.info.jurisdictionName} {report.info.electionName}</a>
+      {:else}
+      {report.info.jurisdictionName} {report.info.electionName}
+      {/if}
+      was held on
       <strong>{formatDate(report.info.date)}</strong>.
       <strong>{getCandidate(report.winner).name}</strong>
       was the winner out of
@@ -77,9 +83,9 @@
     </p>
     <p>
       {#if report.winner == report.condorcet}
-        <strong>{getCandidate(report.winner).name}</strong> was also the Condorcet winner.
+        <strong>{getCandidate(report.winner).name}</strong> was also the <a href="https://en.wikipedia.org/wiki/Condorcet_method">Condorcet winner</a>.
       {:else}
-        <strong>{getCandidate(report.condorcet).name}</strong> was the Condorcet winner.
+        <strong>{getCandidate(report.condorcet).name}</strong> was the <a href="https://en.wikipedia.org/wiki/Condorcet_method">Condorcet winner</a>.
       {/if}
     </p>
   </div>
@@ -94,7 +100,7 @@
       <h2>Runoff Rounds</h2>
 
       <p>
-        This diagram shows the votes of each remaining candidate at each round,
+        This <a href="https://en.wikipedia.org/wiki/Sankey_diagram">Sankey diagram</a> shows the votes of each remaining candidate at each round,
         as well as the breakdown of votes transferred when each candidate was
         eliminated.
       </p>
@@ -113,7 +119,7 @@
       For every pair of candidates, this table shows the fraction of voters who
       preferred one to the other. A preference means that either a voter ranks a
       candidate ahead of the other, or ranks one candidate but does not list the
-      other. Ballots which list neither candidate are not counted towards the
+      other. Ballots which rank neither candidate are not counted towards the
       percent counts.
     </p>
   </div>
@@ -167,7 +173,7 @@
       <h2>Final Vote by First Choice</h2>
       <p>
         This table tracks which candidate ballots were ultimately allocated to,
-        for ballots that ranked an eliminated candidate first.
+        among ballots that ranked an eliminated candidate first.
       </p>
     </div>
 

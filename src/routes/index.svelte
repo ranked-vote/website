@@ -25,11 +25,12 @@
     </div>
     <p>
       Ranked-choice elections produce more data on voter preferences than
-      traditional pick-one elections.
+      traditional pick-one elections. <strong>ranked.vote</strong> runs analysis on the
+      ballot-level data and publishes reports on each election.
     </p>
 
     <p>
-      ranked.vote is a project of
+      <strong>ranked.vote</strong> is a project of
       <a href="/">Paul Butler</a>.
       For more information, see <a href="/about">the about page</a>.
     </p>

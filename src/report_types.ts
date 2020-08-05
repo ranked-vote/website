@@ -72,6 +72,7 @@ export interface IElectionInfo {
     jurisdictionName: string
     officeName: string
     electionName: string
+    website?: string
 }
 
 export interface ICandidate {
