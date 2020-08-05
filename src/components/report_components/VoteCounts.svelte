@@ -6,6 +6,7 @@
   } from "../../report_types";
   import type { CandidateContext } from "../candidates";
   import { getContext } from "svelte";
+  import tooltip from "../../tooltip";
 
   export let candidateVotes: ICandidateVotes[];
 
@@ -49,12 +50,18 @@
           <rect
             class="firstRound"
             height={innerHeight}
-            width={scale * votes.firstRoundVotes} />
+            width={scale * votes.firstRoundVotes}
+            use:tooltip={`<strong>${getCandidate(votes.candidate).name}</strong>
+            received <strong>${votes.firstRoundVotes.toLocaleString()}</strong> votes
+            in the first round.`} />
           <rect
             class="transfer"
             x={scale * votes.firstRoundVotes}
             height={innerHeight}
-            width={scale * votes.transferVotes} />
+            width={scale * votes.transferVotes}
+            use:tooltip={`<strong>${getCandidate(votes.candidate).name}</strong>
+            received <strong>${votes.transferVotes.toLocaleString()}</strong> transfer votes.`}
+            />
         </g>
         {#if votes.roundEliminated !== null}
             <text

@@ -1,11 +1,21 @@
 <script type="ts">
-  import type { ICandidatePairTable } from "../../report_types";
+  import type {
+    ICandidatePairTable,
+    ICandidatePairEntry,
+    Allocatee,
+  } from "../../report_types";
   import type { CandidateContext } from "../candidates";
   import { getContext } from "svelte";
+  import tooltip from "../../tooltip";
 
   export let data: ICandidatePairTable;
   export let rowLabel: string;
   export let colLabel: string;
+  export let generateTooltip: (
+    c1: Allocatee,
+    c2: Allocatee,
+    entry: ICandidatePairEntry
+  ) => string;
 
   const { getCandidate } = getContext("candidates") as CandidateContext;
 
@@ -96,8 +106,11 @@
           </td>
         {/if}
         <td class="rowLabel">{getCandidate(row).name}</td>
-        {#each data.entries[i] as entry}
-          <td class="entry" style={entry ? `background: ${fracToColor(entry.frac)}` : null}>
+        {#each data.entries[i] as entry, j}
+          <td
+            use:tooltip={(generateTooltip && entry) ? generateTooltip(row, data.cols[j], entry) : null}
+            class="entry"
+            style={entry ? `background: ${fracToColor(entry.frac)}` : null}>
             {#if entry}{Math.round(entry.frac * 1000) / 10}%{/if}
           </td>
         {/each}

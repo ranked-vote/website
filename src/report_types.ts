@@ -44,12 +44,13 @@ export interface IContestReport {
 export interface ICandidatePairTable {
     rows: Allocatee[]
     cols: Allocatee[]
-    entries: CandidatePairEntry[][]
+    entries: ICandidatePairEntry[][]
 }
 
-export interface CandidatePairEntry {
+export interface ICandidatePairEntry {
     frac: number
-    count: number
+    numerator: number
+    denominator: number
 }
 
 export interface ICandidateVotes {

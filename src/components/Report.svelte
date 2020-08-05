@@ -1,8 +1,14 @@
 <script type="ts">
-  import type { IContestReport, Allocatee, ICandidate } from "../report_types";
+  import type {
+    IContestReport,
+    Allocatee,
+    ICandidate,
+    ICandidatePairEntry,
+  } from "../report_types";
   import VoteCounts from "./report_components/VoteCounts.svelte";
   import Sankey from "./report_components/Sankey.svelte";
   import CandidatePairTable from "./report_components/CandidatePairTable.svelte";
+  import { EXHAUSTED } from "./candidates";
 
   import { onMount, setContext } from "svelte";
 
@@ -61,11 +67,14 @@
       The {report.info.jurisdictionName} {report.info.electionName} was held on
       <strong>{formatDate(report.info.date)}</strong>.
       <strong>{report.candidates[report.winner].name}</strong>
-      was the winner out of <strong>{report.numCandidates}</strong>&nbsp;candidates
+      was the winner out of
+      <strong>{report.numCandidates}</strong>
+      &nbsp;candidates
       {#if report.rounds.length > 1}
-        {' '}after <strong>{report.rounds.length - 1}</strong>&nbsp;elimination rounds.
-      {:else}
-        . No elimination rounds were necessary to determine the outcome.
+        {' '}after
+        <strong>{report.rounds.length - 1}</strong>
+        &nbsp;elimination rounds.
+      {:else}. No elimination rounds were necessary to determine the outcome.
       {/if}
     </p>
   </div>
@@ -96,8 +105,8 @@
   <div class="leftCol">
     <h2>Pairwise Preferences</h2>
     <p>
-      For every pair of candidates, this table shows the fraction of voters
-      who preferred one to the other. A preference means that either a voter ranks a
+      For every pair of candidates, this table shows the fraction of voters who
+      preferred one to the other. A preference means that either a voter ranks a
       candidate ahead of the other, or ranks one candidate but does not list the
       other. Ballots which list neither candidate are not counted towards the
       percent counts.
@@ -105,7 +114,16 @@
   </div>
 
   <div class="rightCol">
-    <CandidatePairTable data={report.pairwisePreferences} rowLabel="Preferred Candidate" colLabel="Less-preferred Candidate" />
+    <CandidatePairTable
+      data={report.pairwisePreferences}
+      rowLabel="Preferred Candidate"
+      colLabel="Less-preferred Candidate"
+      generateTooltip={(row, col, entry) => `
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> voters
+        who expressed a preference, <strong>${Math.round(entry.frac * 1000) / 10}%</strong>
+        (<strong>${entry.numerator.toLocaleString()}</strong>) preferred
+        <strong>${getCandidate(row).name}</strong> to <strong>${getCandidate(col).name}</strong>.
+      `} />
   </div>
 </div>
 
@@ -119,7 +137,22 @@
   </div>
 
   <div class="rightCol">
-    <CandidatePairTable data={report.firstAlternate} rowLabel="First Choice" colLabel="Second Choice" />
+    <CandidatePairTable
+      generateTooltip={(row, col, entry) => (col !== EXHAUSTED ? `
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> voters who chose <strong>${getCandidate(row).name}</strong>
+        as their first choice, <strong>${entry.numerator.toLocaleString()}</strong>
+        (<strong>${Math.round(entry.frac * 1000) / 10}%</strong>)
+        chose <strong>${getCandidate(col).name}</strong>
+        as their second choice.
+        ` : `
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> voters who chose <strong>${getCandidate(row).name}</strong>
+        as their first choice, <strong>${entry.numerator.toLocaleString()}</strong>
+        (<strong>${Math.round(entry.frac * 1000) / 10}%</strong>)
+        did not rank another candidate.
+       `)}
+      data={report.firstAlternate}
+      rowLabel="First Choice"
+      colLabel="Second Choice" />
   </div>
 </div>
 
@@ -127,11 +160,29 @@
   <div class="row">
     <div class="leftCol">
       <h2>Final Vote by First Choice</h2>
-      <p>This table tracks which candidate ballots were ultimately allocated to, for ballots that ranked an eliminated candidate first.</p>
+      <p>
+        This table tracks which candidate ballots were ultimately allocated to,
+        for ballots that ranked an eliminated candidate first.
+      </p>
     </div>
 
     <div class="rightCol">
-      <CandidatePairTable data={report.firstFinal} rowLabel="First Round Choice" colLabel="Final Round Choice" />
+      <CandidatePairTable
+        generateTooltip={(row, col, entry) => (col !== EXHAUSTED ? `
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> ballots that ranked <strong>${getCandidate(row).name}</strong>
+        first, <strong>${entry.numerator.toLocaleString()}</strong>
+        (<strong>${Math.round(entry.frac * 1000) / 10}%</strong>)
+        were allocated to <strong>${getCandidate(col).name}</strong>
+        in the final round.
+        ` : `
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> ballots that ranked <strong>${getCandidate(row).name}</strong>
+        first, <strong>${entry.numerator.toLocaleString()}</strong>
+        (<strong>${Math.round(entry.frac * 1000) / 10}%</strong>)
+        were exhausted by the final round.
+        `)}
+        data={report.firstFinal}
+        rowLabel="First Round Choice"
+        colLabel="Final Round Choice" />
     </div>
   </div>
 {/if}
