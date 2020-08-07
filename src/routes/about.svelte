@@ -32,14 +32,14 @@
 <p>
   This website and the data pipeline behind it (including the tabulator) are
   <a href="https://github.com/ranked-vote">open source</a> and liberally licensed. Website content and generated reports may
-  be freely distributed with attribution under the CC-BY license.
+  be freely distributed with attribution under the <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a> license.
 </p>
 
 <h2>Colophon</h2>
 
 <p>
-  The data pipeline for ranked.vote was written in Rust. The website, including
-  visualizations, is created with Sapper and Svelte, and is hosted on Netlify.
-  The font is Source Sans Pro.
+  The <a href="https://github.com/ranked-vote/ranked-vote">data pipeline</a> for ranked.vote was written in <a href="https://www.rust-lang.org/">Rust</a>. This website, including
+  visualizations, was created with Sapper and <a href="https://svelte.dev/">Svelte</a>, and is hosted on <a href="https://www.netlify.com/">Netlify</a>.
+  The font is <a href="https://github.com/adobe-fonts/source-sans-pro">Source Sans Pro</a>.
 </p>
 </div>

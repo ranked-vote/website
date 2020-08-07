@@ -25,7 +25,7 @@
     </div>
     <p>
       Ranked-choice elections produce more data on voter preferences than
-      traditional pick-one elections. <strong>ranked.vote</strong> runs analysis on the
+      pick-one elections. <strong>ranked.vote</strong> runs analysis on the
       ballot-level data and publishes reports on each election.
     </p>
 

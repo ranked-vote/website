@@ -97,6 +97,10 @@
       if (this.fromCandidate === EXHAUSTED) {
         return `<strong>${this.votes.toLocaleString()}</strong> exhausted votes
         carried over into round <strong>${this.round}</strong>`;
+      } else if (this.toCandidate === EXHAUSTED) {
+        return `<strong>${this.votes.toLocaleString()}</strong> votes
+        for <strong>${getCandidate(this.fromCandidate).name}</strong>
+        became exhausted in round <strong>${this.round}</strong>`;
       } else if (this.fromCandidate === this.toCandidate) {
         return `<strong>${this.votes.toLocaleString()}</strong> votes
         for <strong>${getCandidate(this.toCandidate).name}</strong>

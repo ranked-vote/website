@@ -89,10 +89,12 @@
 <table>
   <tbody>
     <tr>
-      <td colspan={2} rowspan={2} />
-      <td class="colsLabel" colspan={data.cols.length}>{colLabel}</td>
+      <td/>
+      <td class="colsLabel" colspan={data.cols.length + 1}>{colLabel}</td>
     </tr>
     <tr>
+      <td class="rowsLabel" rowspan={data.rows.length + 1}><div>{rowLabel}</div></td>
+      <td />
       {#each data.cols as col}
         <td class="colLabel">
           <div>{getCandidate(col).name}</div>
@@ -101,11 +103,6 @@
     </tr>
     {#each data.rows as row, i}
       <tr>
-        {#if i == 0}
-          <td class="rowsLabel" rowspan={data.rows.length}>
-            <div>{rowLabel}</div>
-          </td>
-        {/if}
         <td class="rowLabel">{getCandidate(row).name}</td>
         {#each data.entries[i] as entry, j}
           <td
