@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=fallback');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=fallback');
 body {
     margin: 0;
     padding: 0;
@@ -26,6 +26,10 @@ body {
 
 .row {
     margin-bottom: 60px;
+}
+
+.row:last-child {
+    margin-bottom: 0;
 }
 
 @media (min-width: 1100px) {
@@ -161,4 +165,9 @@ h3 strong {
 
 .race a .title strong {
     color: black;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px dotted #ddd;
 }

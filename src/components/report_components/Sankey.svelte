@@ -83,13 +83,13 @@
       r1x = r1x - Math.min(width - this.width, 0);
       let r1x2 = r1x + width;
       let r2x2 = r2x + width;
-      return `
-            M ${r1x} ${r1y}
-            H ${r1x2}
-            C ${r1x2} ${midY} ${r2x2} ${midY} ${r2x2} ${r2y}
-            H ${r2x}
-            C ${r2x} ${midY} ${r1x} ${midY} ${r1x} ${r1y}
-            Z
+      return `\
+            M ${r1x} ${r1y} \
+            H ${r1x2} \
+            C ${r1x2} ${midY} ${r2x2} ${midY} ${r2x2} ${r2y} \
+            H ${r2x} \
+            C ${r2x} ${midY} ${r1x} ${midY} ${r1x} ${r1y} \
+            Z \
         `;
     }
 
