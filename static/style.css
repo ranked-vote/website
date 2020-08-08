@@ -64,6 +64,10 @@ body {
     margin-top: 0;
 }
 
+li {
+    margin-bottom: 10px;
+}
+
 /* Style */
 
 p {

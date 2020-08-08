@@ -23,7 +23,7 @@
   const firstRoundAllocations = rounds[0].allocations;
   const firstRoundNumCandidates = firstRoundAllocations.length - 1;
   const voteScale =
-    (width - candidateMargin * firstRoundNumCandidates - edgeMargin) /
+    (width - candidateMargin * firstRoundNumCandidates - edgeMargin - 10) /
     firstRoundAllocations.reduce((a, b) => a + b.votes, 0);
 
   const innerHeight = roundHeight * (rounds.length - 1) + voteBlockHeight;

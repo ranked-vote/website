@@ -104,6 +104,11 @@
         as well as the breakdown of votes transferred when each candidate was
         eliminated.
       </p>
+
+      <p>
+        Note that the tabulation (but not the winner) may differ from the official count. You
+        can <a href="/discrepancies">read more about why this is</a>.
+      </p>
     </div>
 
     <div class="rightCol">
