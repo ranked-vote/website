@@ -31,7 +31,7 @@
 
     <p>
       <strong>ranked.vote</strong> is a project of
-      <a href="/">Paul Butler</a>.
+      <a href="https://paulbutler.org/">Paul Butler</a>.
       For more information, see <a href="/about">the about page</a>.
     </p>
   </div>
