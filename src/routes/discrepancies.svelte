@@ -32,7 +32,7 @@
   These result in the same winner, but the count at each round may differ.
   For consistency and information density, we tabulate all elections the same
   way: all candidates who are unable to win are removed at each round, and
-  we stop as soon as a winner is found.
+  we continue until two candidates remain.
 </p>
 
 <p>
