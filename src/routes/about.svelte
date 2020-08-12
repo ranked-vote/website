@@ -10,8 +10,8 @@
     Instant-runoff elections
   </a>
   produce a lot of data about voter preferences. Typically, this information is
-  made available by election boards in obscure file formats and requires
-  processing. The purpose of ranked.vote is to increase transparency into these
+  made available by election boards in specialized file formats and requires
+  processing to interpret. The purpose of ranked.vote is to increase transparency into these
   elections by creating detailed and intuitive reports about them.
 </p>
 
