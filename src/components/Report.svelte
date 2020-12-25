@@ -74,7 +74,7 @@
       <strong>{formatDate(report.info.date)}</strong>.
       <strong>{getCandidate(report.winner).name}</strong>
       was the winner out of
-      <strong>{report.numCandidates}</strong>&nbsp;{#if report.numCandidates == 1}candidate{:else}candidates{/if}{#if report.rounds.length > 1}after
+      <strong>{report.numCandidates}</strong>&nbsp;{#if report.numCandidates == 1}candidate {:else}candidates {/if}{#if report.rounds.length > 1}after
         {" "}<strong>{report.rounds.length - 1}</strong>&nbsp;elimination {#if report.rounds.length == 2}round{:else}rounds{/if}.
       {:else}. No elimination rounds were necessary to determine the outcome.
       {/if}
