@@ -12,9 +12,51 @@
   // https://github.com/sveltejs/sapper/pull/1222
   export let report;
   import Report from "../../components/Report.svelte";
+
+  function formatDate(dateStr) {
+    let date = new Date(dateStr);
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "Decemner",
+    ];
+
+    return `${
+      months[date.getUTCMonth()]
+    } ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+  }
+
+  let searchParams = new URLSearchParams();
+  searchParams.set('jurisdiction', report.info.jurisdictionName);
+  searchParams.set('election', report.info.name);
+  searchParams.set('date', formatDate(report.info.date));
+  searchParams.set('winner', report.candidates[report.winner].name);
+  searchParams.set('rounds', report.rounds.length);
+  export let shareUrl = 'https://sharecards-y4fpm336fq-uk.a.run.app/jrCviGlzplyfJeQEyN.png?' + searchParams.toString();
+
+  export function shareTag(property) {
+    return `<meta property="${property}" content="${shareUrl}" />`
+  }
 </script>
 
+<svelte:head>
 <title>ranked.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(0, 4)}</title>
+<meta property="og:title" content="{report.info.jurisdictionName} / {report.info.name}" />
+{@html shareTag("og:image")}
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:creator" content="@paulgb" />
+<meta property="twitter:title" content="{report.info.jurisdictionName} / {report.info.name}" />
+{@html shareTag("twitter:image")}
+</svelte:head>
 
 <div class="wide container">
 <Report {report} />
