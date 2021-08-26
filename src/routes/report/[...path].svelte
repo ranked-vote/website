@@ -41,21 +41,21 @@
   searchParams.set('date', formatDate(report.info.date));
   searchParams.set('winner', report.candidates[report.winner].name);
   searchParams.set('rounds', report.rounds.length);
-  export let shareUrl = 'https://sharecards-y4fpm336fq-uk.a.run.app/jrCviGlzplyfJeQEyN.png?' + searchParams.toString();
 
-  export function shareTag(property) {
-    return `<meta property="${property}" content="${shareUrl}" />`
+  export function shareTag(property, sizekey) {
+    return `<meta property="${property}"
+      content="https://sharecards-y4fpm336fq-uk.a.run.app/6v4PnZyrkU5kJlJQR6/${sizekey}.png?${searchParams.toString()}" />`
   }
 </script>
 
 <svelte:head>
 <title>ranked.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(0, 4)}</title>
 <meta property="og:title" content="{report.info.jurisdictionName} / {report.info.name}" />
-{@html shareTag("og:image")}
+{@html shareTag("og:image", "fb")}
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:creator" content="@paulgb" />
 <meta property="twitter:title" content="{report.info.jurisdictionName} / {report.info.name}" />
-{@html shareTag("twitter:image")}
+{@html shareTag("twitter:image", "twitter")}
 </svelte:head>
 
 <div class="wide container">
