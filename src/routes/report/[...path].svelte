@@ -55,7 +55,7 @@
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:creator" content="@paulgb" />
 <meta property="twitter:title" content="{report.info.jurisdictionName} / {report.info.name}" />
-{@html shareTag("twitter:image", "twitter")}
+{@html shareTag("twitter:image", "1360x712")}
 </svelte:head>
 
 <div class="wide container">
