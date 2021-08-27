@@ -44,7 +44,7 @@
 
   export function shareTag(property, sizekey) {
     return `<meta property="${property}"
-      content="https://sharecards-y4fpm336fq-uk.a.run.app/6v4PnZyrkU5kJlJQR6/${sizekey}.png?${searchParams.toString()}" />`
+      content="https://sharecards-y4fpm336fq-uk.a.run.app/a3reQYZVpvTWv4arId/${sizekey}.png?${searchParams.toString()}" />`
   }
 </script>
 
