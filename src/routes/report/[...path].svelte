@@ -13,17 +13,17 @@
   export let report;
   export let path;
   import Report from "../../components/Report.svelte";
-
-  //export let cardPath = path.slice(1).join("/"); // remove "report"
 </script>
 
 <svelte:head>
   <title>ranked.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(0, 4)}</title>
 
   <meta property="og:title" content="{report.info.jurisdictionName} / {report.info.name}" />
+  <meta property="og:image" content={"https://r.moxy.social/ykZcSLKZUq/ranked/fb.png/" + path.join("/")} />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:creator" content="@paulgb" />
   <meta property="twitter:title" content="{report.info.jurisdictionName} / {report.info.name}" />
+  <meta property="twitter:image" content={"https://r.moxy.social/ykZcSLKZUq/ranked/twitter.png/" + path.join("/")} />
 </svelte:head>
 
 <div class="wide container">
