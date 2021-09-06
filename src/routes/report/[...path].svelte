@@ -3,7 +3,7 @@
     let {path} = page.params;
     let result = await this.fetch(`/api/${path.join('/')}/report.json`);
     let report = await result.json();
-    return {report};
+    return {report, path};
   }
 </script>
 
@@ -11,11 +11,15 @@
   // TODO: this could be a TS script once this Sapper issue is closed:
   // https://github.com/sveltejs/sapper/pull/1222
   export let report;
+  export let path;
   import Report from "../../components/Report.svelte";
+
+  //export let cardPath = path.slice(1).join("/"); // remove "report"
 </script>
 
 <svelte:head>
   <title>ranked.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(0, 4)}</title>
+
   <meta property="og:title" content="{report.info.jurisdictionName} / {report.info.name}" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:creator" content="@paulgb" />
@@ -31,3 +35,5 @@
   Learn more <a href="https://ranked.vote/about">about ranked.vote</a>.
 </p></div>
 </div>
+
+<a style="display:none;" href={"/card/" + path.join("/")}>card</a>
