@@ -37,7 +37,7 @@
 <div class="card">
     <div class="electionHeader">
       <h3>
-        <a href="/">ranked.vote</a>
+        <a href="/">approval.vote</a>
         //
         <strong>{report.info.jurisdictionName}</strong>
         {report.info.officeName}

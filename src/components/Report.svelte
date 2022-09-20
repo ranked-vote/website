@@ -53,7 +53,7 @@
   <p class="description" />
   <div class="electionHeader">
     <h3>
-      <a href="/">ranked.vote</a>
+      <a href="/">approval.vote</a>
       //
       <strong>{report.info.jurisdictionName}</strong>
       {report.info.officeName}
@@ -72,12 +72,10 @@
       {/if}
       was held on
       <strong>{formatDate(report.info.date)}</strong>.
-      <strong>{getCandidate(report.winner).name}</strong>
+      <strong>{getCandidate(report.winner).name}</strong> 
+      <!-- TODO: Allow for multiple winners -->
       was the winner out of
-      <strong>{report.numCandidates}</strong>&nbsp;{#if report.numCandidates == 1}candidate {:else}candidates {/if}{#if report.rounds.length > 1}after
-        {" "}<strong>{report.rounds.length - 1}</strong>&nbsp;elimination {#if report.rounds.length == 2}round{:else}rounds{/if}.
-      {:else}. No elimination rounds were necessary to determine the outcome.
-      {/if}
+      <strong>{report.numCandidates}</strong>&nbsp;{#if report.numCandidates == 1}candidate {:else}candidates{/if}.
     </p>
     <p>
       {#if report.winner == report.condorcet}
@@ -91,29 +89,6 @@
     <VoteCounts candidateVotes={report.totalVotes} />
   </div>
 </div>
-
-{#if report.rounds.length > 1}
-  <div class="row">
-    <div class="leftCol">
-      <h2>Runoff Rounds</h2>
-
-      <p>
-        This <a href="https://en.wikipedia.org/wiki/Sankey_diagram">Sankey diagram</a> shows the votes of each remaining candidate at each round,
-        as well as the breakdown of votes transferred when each candidate was
-        eliminated.
-      </p>
-
-      <p>
-        Note that the tabulation (but not the winner) may differ from the official count. You
-        can <a href="/discrepancies">read more about why this is</a>.
-      </p>
-    </div>
-
-    <div class="rightCol">
-      <Sankey rounds={report.rounds} />
-    </div>
-  </div>
-{/if}
 
 {#if report.numCandidates > 1}
 <div class="row">
@@ -142,12 +117,12 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="leftCol">
     <h2>First Alternate</h2>
     <p>
       For every pair of candidates, this table shows the fraction of voters who
-      ranked one candidate first ranked the other candidate second.
+      approval one candidate first approval the other candidate second.
     </p>
   </div>
 
@@ -178,20 +153,20 @@
       <h2>Final Vote by First Choice</h2>
       <p>
         This table tracks which candidate ballots were ultimately allocated to,
-        among ballots that ranked an eliminated candidate first.
+        among ballots that approval an eliminated candidate first.
       </p>
     </div>
 
     <div class="rightCol">
       <CandidatePairTable
         generateTooltip={(row, col, entry) => (col !== EXHAUSTED ? `
-        Of the <strong>${entry.denominator.toLocaleString()}</strong> ballots that ranked <strong>${getCandidate(row).name}</strong>
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> ballots that approval <strong>${getCandidate(row).name}</strong>
         first, <strong>${entry.numerator.toLocaleString()}</strong>
         (<strong>${Math.round(entry.frac * 1000) / 10}%</strong>)
         were allocated to <strong>${getCandidate(col).name}</strong>
         in the final round.
         ` : `
-        Of the <strong>${entry.denominator.toLocaleString()}</strong> ballots that ranked <strong>${getCandidate(row).name}</strong>
+        Of the <strong>${entry.denominator.toLocaleString()}</strong> ballots that approval <strong>${getCandidate(row).name}</strong>
         first, <strong>${entry.numerator.toLocaleString()}</strong>
         (<strong>${Math.round(entry.frac * 1000) / 10}%</strong>)
         were exhausted by the final round.
@@ -201,4 +176,5 @@
         colLabel="Final Round Choice" />
     </div>
   </div>
+-->
 {/if}

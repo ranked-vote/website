@@ -1,4 +1,4 @@
 #!/bin/sh
 
-RANKED_VOTE_REPORTS="../ranked-vote/reports" npm run dev
+APPROVAL_VOTE_REPORTS="reports" && npm run export && npm run dev
 

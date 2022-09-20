@@ -1,12 +1,12 @@
-<title>ranked.vote: Understanding Discrepancies</title>
+<title>approval.vote: Understanding Discrepancies</title>
 
 <div class="container">
 <div class="description">
-  <h1><a href="/">ranked.vote</a>: Understanding Discrepancies</h1>
+  <h1><a href="/">approval.vote</a>: Understanding Discrepancies</h1>
 </div>
 
 <p>
-  All of the analysis that goes into ranked.vote reports is based only
+  All of the analysis that goes into approval.vote reports is based only
   on ballot-level data. This includes the IRV tabulation, which backs
   the “Runoff Rounds” section.
 </p>

@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "approval.vote",
+  "description": "All Approval Voting Elections in one place.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

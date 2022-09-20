@@ -14,23 +14,23 @@
   export let elections;
 </script>
 
-<title>ranked.vote: detailed reports on ranked-choice elections.</title>
+<title>approval.vote: detailed reports on approval-choice elections.</title>
 
 <div class="wide container">
 <div class="row">
   <div class="leftCol">
     <div class="description">
-      <h1>ranked.vote</h1>:
-      detailed reports on ranked-choice elections.
+      <h1>approval.vote</h1>:
+      detailed reports on approval-choice elections.
     </div>
     <p>
-      Ranked-choice elections produce more data on voter preferences than
-      pick-one elections. <strong>ranked.vote</strong> runs analysis on the
+      Approval-choice elections produce more data on voter preferences than
+      pick-one elections. <strong>approval.vote</strong> runs analysis on the
       ballot-level data and publishes reports on each election.
     </p>
 
     <p>
-      <strong>ranked.vote</strong> is a project of
+      <strong>approval.vote</strong> is a project of
       <a href="https://paulbutler.org/">Paul Butler</a>.
       For more information, see <a href="/about">the about page</a>.
     </p>
