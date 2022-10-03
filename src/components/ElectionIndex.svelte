@@ -6,7 +6,8 @@
   let electionsByYear = new Map<string, IElectionIndexEntry[]>();
 
   elections.forEach((e) => {
-    let year = e.date.substr(0, 4);
+    let year = e.date.split("-")[0];
+    // let year = e.date.substr(0, 4);
     if (!electionsByYear.has(year)) {
       electionsByYear.set(year, []);
     }

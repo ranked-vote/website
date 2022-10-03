@@ -9,7 +9,6 @@ import pkg from './package.json';
 import typescript from '@rollup/plugin-typescript';
 import autoPreprocess from 'svelte-preprocess';
 
-
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
@@ -72,8 +71,6 @@ export const server = {
 			'process.env.NODE_ENV': JSON.stringify(mode)
 		}),
 		svelte({
-			generate: 'ssr',
-			dev,
 			preprocess: autoPreprocess()
 		}),
 		resolve({
