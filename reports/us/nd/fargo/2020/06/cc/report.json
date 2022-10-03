@@ -83,7 +83,7 @@
       "transfers": []
     }
   ],
-  "winner": 0,
+  "winners": [0,1],
   "condorcet": 0,
   "numCandidates": 7,
   "totalVotes": [
@@ -130,11 +130,7 @@
       "roundEliminated": 1
     }
   ],
-  "pairwisePreferences": {
-    "rows": [0],
-    "cols": [0],
-    "entries": [[null]]
-  },
+
   "firstAlternate": {
     "rows": [0],
     "cols": [0, "X"],

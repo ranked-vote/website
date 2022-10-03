@@ -52,8 +52,7 @@
             height={innerHeight}
             width={scale * votes.firstRoundVotes}
             use:tooltip={`<strong>${getCandidate(votes.candidate).name}</strong>
-            received <strong>${votes.firstRoundVotes.toLocaleString()}</strong> votes
-            in the first round.`} />
+            received <strong>${votes.firstRoundVotes.toLocaleString()}</strong> votes.`} />
           <rect
             class="transfer"
             x={scale * votes.firstRoundVotes}
@@ -68,7 +67,7 @@
             font-size="12"
             dominant-baseline="middle"
             x={10 + scale * (votes.firstRoundVotes + votes.transferVotes)}>
-            Eliminated in round {votes.roundEliminated}
+            Eliminated
             </text>
         {/if}
       </g>

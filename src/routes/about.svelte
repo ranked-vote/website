@@ -6,8 +6,8 @@
 </div>
 
 <p>
-  <a href="https://en.wikipedia.org/wiki/Instant-runoff_voting">
-    Instant-runoff elections
+  <a href="https://en.wikipedia.org/wiki/Approval_Voting">
+    Approval Voting elections
   </a>
   produce a lot of data about voter preferences. Typically, this information is
   made available by election boards in specialized file formats and requires
@@ -22,8 +22,8 @@
 </p>
 
 <p>
-  approval.vote was created and is maintained by
-  <a href="https://paulbutler.org">Paul Butler</a>.
+  approval.vote is maintained by
+   <a href="https://felixsargent.com">Felix Sargent</a>. It is a fork from the original work of <a href="https://paulbutler.org">Paul Butler's</a> <a href="https://ranked.vote">ranked.vote</a>.
   It is non-partisan and has received no outside funding.
 </p>
 
@@ -31,14 +31,14 @@
 
 <p>
   This website and the data pipeline behind it (including the tabulator) are
-  <a href="https://github.com/approval-vote">open source</a> and liberally licensed. Website content and generated reports may
+  <a href="https://github.com/electionscience/approval-vote">open source</a> and liberally licensed. Website content and generated reports may
   be freely distributed with attribution under the <a href="https://creativecommons.org/licenses/by/2.0/">CC-BY</a> license.
 </p>
 
 <h2>Colophon</h2>
 
 <p>
-  The <a href="https://github.com/approval-vote/approval-vote">data pipeline</a> for approval.vote was written in <a href="https://www.rust-lang.org/">Rust</a>. This website, including
+  The <a href="https://github.com/electionscience/approval-vote">data pipeline</a> for approval.vote was written in <a href="https://www.rust-lang.org/">Rust</a>. This website, including
   visualizations, was created with Sapper and <a href="https://svelte.dev/">Svelte</a>, and is hosted on <a href="https://www.netlify.com/">Netlify</a>.
   The font is <a href="https://github.com/adobe-fonts/source-sans-pro">Source Sans Pro</a>.
 </p>

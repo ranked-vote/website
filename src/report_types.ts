@@ -19,7 +19,7 @@ export interface IContestIndexEntry {
     office: string
     officeName: string
     name: string
-    winner: string
+    winners: string
     numCandidates: number
     numRounds: number
 }
@@ -31,7 +31,7 @@ export interface IContestReport {
     ballotCount: number
     candidates: ICandidate[]
     rounds: ITabulatorRound[]
-    winner: CandidateId
+    winners: CandidateId[]
     condorcet?: CandidateId
     smithSet: CandidateId[]
     numCandidates: number

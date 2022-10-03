@@ -30,13 +30,11 @@
             <a href="/report/{election.path}/{contest.office}">
               <div class="title">
                 <strong>{contest.officeName}</strong>
-                {contest.winner}
+                {contest.winners}
               </div>
               <div class="meta">
                 <strong>{contest.numCandidates}</strong>
-                candidates,
-                <strong>{contest.numRounds}</strong>
-                rounds
+                candidates
               </div>
             </a>
           </div>
