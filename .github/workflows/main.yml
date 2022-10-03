@@ -18,4 +18,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: __sapper__/export/approval-vote # The folder the action should deploy.
+          folder: __sapper__/export/ # The folder the action should deploy.
