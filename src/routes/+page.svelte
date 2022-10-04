@@ -1,16 +1,7 @@
-<script context="module">
-  export async function preload(page, session) {
-    let result = await this.fetch("/api/reports.json");
-    let index = await result.json();
-    return index;
-  }
-</script>
+
 
 <script>
-  // TODO: this could be a TS script once this Sapper issue is closed:
-  // https://github.com/sveltejs/sapper/pull/1222
   import ElectionIndex from "../components/ElectionIndex.svelte";
-
   export let elections;
 </script>
 

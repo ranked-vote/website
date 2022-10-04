@@ -1,4 +1,4 @@
-<script type="ts">
+<script context="module" type="ts">
   import type {
     ITabulatorRound,
     Allocatee,
@@ -32,8 +32,8 @@
 
   class VoteBlock {
     constructor(
-      public x: number,
       public width: number,
+      public x: number,
       public y: number,
       private allocatee: Allocatee,
       private votes: number,

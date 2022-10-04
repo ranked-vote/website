@@ -6,7 +6,6 @@
     ICandidatePairEntry,
   } from '../report_types';
   import VoteCounts from './report_components/VoteCounts.svelte';
-  import Sankey from './report_components/Sankey.svelte';
   import CandidatePairTable from './report_components/CandidatePairTable.svelte';
   import { EXHAUSTED } from './candidates';
 

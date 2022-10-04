@@ -1,5 +1,3 @@
-import { timestamp, files, shell, routes } from '@sapper/service-worker';
-
 const ASSETS = `cache${timestamp}`;
 
 const to_cache = build.concat(files);

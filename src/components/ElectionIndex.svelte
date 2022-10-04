@@ -1,13 +1,11 @@
 <script type="ts">
   import type { IElectionIndexEntry } from "../report_types";
 
-  export let elections: IElectionIndexEntry[];
-
+  import index from "$lib/reports/index.json"
   let electionsByYear = new Map<string, IElectionIndexEntry[]>();
 
-  elections.forEach((e) => {
-    let year = e.date.split("-")[0];
-    // let year = e.date.substr(0, 4);
+  index.elections.forEach((e) => {
+    let year = e.date.substr(0, 4);
     if (!electionsByYear.has(year)) {
       electionsByYear.set(year, []);
     }

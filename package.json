@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "export": "vite export --basepath approval-vote --legacy",
     "start": "node __vite__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
@@ -19,6 +18,7 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "next",
