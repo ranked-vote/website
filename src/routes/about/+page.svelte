@@ -1,8 +1,10 @@
+<script>import { base } from '$app/paths';</script>
+
 <title>About approval.vote</title>
 
 <div class="container">
 <div class="description">
-  <h1>About <a href="/">approval.vote</a></h1>
+  <h1>About <a href="{base}/">approval.vote</a></h1>
 </div>
 
 <p>

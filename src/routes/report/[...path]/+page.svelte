@@ -3,6 +3,7 @@
     export let data
     let report = data.report
     let path = data.path
+    import { base } from '$app/paths'
   import Report from "../../../components/Report.svelte";
 </script>
 
@@ -27,4 +28,4 @@
 </p></div>
 </div>
 
-<a style="display:none;" href={"/card/" + path}>card</a>
+<a style="display:none;" href={base + "/card/" + path}>card</a>
