@@ -53,5 +53,5 @@ export interface ICandidate {
     name: string
     writeIn: boolean
     votes: number
-    winner: boolean
+    winner?: boolean
 }

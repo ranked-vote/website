@@ -2,7 +2,6 @@
   import type { ICandidate, IContestReport } from '../../report_types';
   export let report: IContestReport;
 
-
   import tippy from 'tippy.js';
   import type { Props } from 'tippy.js';
   import { followCursor } from 'tippy.js';
@@ -24,23 +23,24 @@
     tippy(elem, props);
   }
 
-
   const outerHeight = 24;
   const innerHeight = 14;
   const labelSpace = 130;
   const width = 600;
 
   const candidates: ICandidate[] = report.candidates;
-  const maxVotes: number = Math.max(...candidates.map((candidate) => candidate.votes));
-  const ballotsCast: number = report.ballotCount
-  const scale = (width - labelSpace - 15) / maxVotes;
+  const maxVotes: number = Math.max(
+    ...candidates.map((candidate) => candidate.votes)
+  );
+  const ballotsCast: number = report.ballotCount;
+  const scale = (width - labelSpace - 50) / maxVotes;
 
   const height = outerHeight * candidates.length;
 </script>
 
 <svg width="100%" viewBox={`0 0 ${width} ${height}`}>
   <g transform={`translate(${labelSpace} 0)`}>
-    {#each report.candidates as candidate, i}
+    {#each candidates as candidate, i}
       <g
         class={candidate.winner === true ? '' : 'eliminated'}
         transform={`translate(0 ${outerHeight * (i + 0.5)})`}
@@ -57,18 +57,16 @@
             received <strong>${candidate.votes.toLocaleString()}</strong> votes, ${(
               (candidate.votes / ballotsCast) *
               100
-            ).toFixed(1)}% of the total.</g>`}
+            ).toFixed(1)}% of the total ballots cast.</g>`}
           />
         </g>
-        {#if candidate.winner != true}
-          <text
-            font-size="12"
-            dominant-baseline="middle"
-            x={10 + scale * candidate.votes}
-          >
-            Eliminated
-          </text>
-        {/if}
+        <text
+          font-size="12"
+          dominant-baseline="middle"
+          x={10 + scale * candidate.votes}
+        >
+          {((candidate.votes / ballotsCast) * 100).toFixed(1)}%</text
+        >
       </g>
     {/each}
   </g>
@@ -76,7 +74,7 @@
 
 <style>
   .votes {
-    fill: #7EC242;
+    fill: #437527;
   }
 
   .eliminated {

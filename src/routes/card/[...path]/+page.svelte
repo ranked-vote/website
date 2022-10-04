@@ -24,6 +24,6 @@
   </div>
 
   <div class="segment">
-    <VoteCounts />
+    <VoteCounts report={report} />
   </div>
 </div>

@@ -92,7 +92,6 @@
         {/if}
       {/each}
 
-      <!-- TODO: Allow for multiple winners -->
       {#if report.winners.length == 1}
         was the winner out of
       {:else}were the winners out of{/if}

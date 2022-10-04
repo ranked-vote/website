@@ -1,17 +1,18 @@
 <script type="ts">
   import { base } from '$app/paths';
-  import type { IElectionIndexEntry } from "../report_types";
+  import type { IElectionIndexEntry } from '../report_types';
 
-  import index from "$lib/reports/index.json"
+  import index from '$lib/reports/index.json';
   let electionsByYear = new Map<number, IElectionIndexEntry[]>();
 
   index.elections.forEach((e) => {
-    let year = parseInt(e.date.split("-")[0]);
+    let year = parseInt(e.date.split('-')[0]);
     if (!electionsByYear.has(year)) {
       electionsByYear.set(year, []);
     }
     electionsByYear.get(year)?.push(e);
   });
+
   electionsByYear = new Map([...electionsByYear].sort((a, b) => b[0] - a[0]));
 </script>
 
