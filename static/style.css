@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    border-top: 5px solid #aa0d0d;
+    border-top: 5px solid #1D4749;
     font-family: 'Source Sans Pro', sans-serif;
     color: #555;
     font-size: 11pt;
@@ -90,7 +90,7 @@ p {
 }
 
 a {
-    color: #aa0d0d;
+    color: #437527;
     text-decoration: none;
 }
 
@@ -113,7 +113,7 @@ h3 a {
 }
 
 h3 strong {
-    color: #aa0d0d;
+    color: #437527;
 }
 
 .meta {

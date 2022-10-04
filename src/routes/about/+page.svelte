@@ -40,8 +40,8 @@
 <h2>Colophon</h2>
 
 <p>
-  The <a href="https://github.com/electionscience/approval-vote">data pipeline</a> for approval.vote was written in <a href="https://www.rust-lang.org/">Rust</a>. This website, including
-  visualizations, was created with Sapper and <a href="https://svelte.dev/">Svelte</a>, and is hosted on <a href="https://www.netlify.com/">Netlify</a>.
+  This website, including
+  visualizations, was created with <a href="https://svelte.dev/">Svelte</a>, and is hosted on <a href="https://www.github.com/">Github</a>.
   The font is <a href="https://github.com/adobe-fonts/source-sans-pro">Source Sans Pro</a>.
 </p>
 </div>

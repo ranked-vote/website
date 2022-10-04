@@ -3,7 +3,6 @@
 <script>
   import { base } from '$app/paths';
   import ElectionIndex from "../components/ElectionIndex.svelte";
-  export let elections;
 </script>
 
 <title>approval.vote: detailed reports on approval voting elections.</title>
@@ -30,7 +29,7 @@
   </div>
 
   <div class="rightCol">
-    <ElectionIndex {elections} />
+    <ElectionIndex />
   </div>
 </div>
 </div>

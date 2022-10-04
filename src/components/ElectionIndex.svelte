@@ -3,15 +3,16 @@
   import type { IElectionIndexEntry } from "../report_types";
 
   import index from "$lib/reports/index.json"
-  let electionsByYear = new Map<string, IElectionIndexEntry[]>();
+  let electionsByYear = new Map<number, IElectionIndexEntry[]>();
 
   index.elections.forEach((e) => {
-    let year = e.date.substr(0, 4);
+    let year = parseInt(e.date.split("-")[0]);
     if (!electionsByYear.has(year)) {
       electionsByYear.set(year, []);
     }
-    electionsByYear.get(year).push(e);
+    electionsByYear.get(year)?.push(e);
   });
+  electionsByYear = new Map([...electionsByYear].sort((a, b) => b[0] - a[0]));
 </script>
 
 {#each [...electionsByYear] as [year, elections]}

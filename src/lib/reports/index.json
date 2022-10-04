@@ -1,18 +1,34 @@
 {
-	"elections": [ {
-		"path": "us/nd/fargo/2020/06",
-		"jurisdictionName": "Fargo",
-		"electionName": "City Commissioner",
-		"date": "2020-06-09",
-		"contests": [
-		  {
-		    "office": "cc",
-		    "officeName": "City Commissioner",
-		    "name": "City Commissioner",
-		    "winners": "John Strand, Arlette Preston",
-		    "numCandidates": 7
-		  }
-		]
-	      }
-	     ]
-      }
+  "elections": [
+    {
+      "path": "us/nd/fargo/2020/06",
+      "jurisdictionName": "Fargo",
+      "electionName": "City Commissioner",
+      "date": "2020-06-09",
+      "contests": [
+        {
+          "office": "cc",
+          "officeName": "City Commissioner",
+          "name": "City Commissioner",
+          "winners": "John Strand, Arlette Preston",
+          "numCandidates": 7
+        }
+      ]
+    },
+    {
+      "path": "us/mo/stl/2021/03",
+      "jurisdictionName": "St Louis",
+      "electionName": "Mayor",
+      "date": "2021-03-08",
+      "contests": [
+        {
+          "office": "mayor",
+          "officeName": "Mayor",
+          "name": "Mayor",
+          "winners": "Tishaura Jones, Cara Spencer",
+          "numCandidates": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,76 +1,85 @@
 <script type="ts">
-  import type {
-    ICandidateVotes,
-    CandidateId,
-    ICandidate,
-  } from "../../report_types";
-  import type { CandidateContext } from "../candidates";
-  import { getContext } from "svelte";
-  import tooltip from "../../tooltip";
+  import type { ICandidate, IContestReport } from '../../report_types';
+  export let report: IContestReport;
 
-  export let candidateVotes: ICandidateVotes[];
 
-  const { getCandidate } = getContext("candidates") as CandidateContext;
+  import tippy from 'tippy.js';
+  import type { Props } from 'tippy.js';
+  import { followCursor } from 'tippy.js';
+  import 'tippy.js/themes/light-border.css';
+  import 'tippy.js/dist/tippy.css';
+
+  function tooltip(elem: Element, content: string | null): void {
+    if (content === null) {
+      return;
+    }
+    let props: Props = {
+      ...({} as any as Props),
+      content,
+      allowHTML: true,
+      theme: 'light-border',
+      plugins: [followCursor],
+      followCursor: true,
+    };
+    tippy(elem, props);
+  }
+
 
   const outerHeight = 24;
   const innerHeight = 14;
   const labelSpace = 130;
   const width = 600;
 
-  const maxVotes = Math.max(...candidateVotes.map((d) => d.firstRoundVotes + d.transferVotes));
+  const candidates: ICandidate[] = report.candidates;
+  const maxVotes: number = Math.max(...candidates.map((candidate) => candidate.votes));
+  const ballotsCast: number = report.ballotCount
   const scale = (width - labelSpace - 15) / maxVotes;
 
-  const height = outerHeight * candidateVotes.length;
+  const height = outerHeight * candidates.length;
 </script>
 
-<style>
-  .firstRound {
-    fill: #aa0d0d;
-  }
+<svg width="100%" viewBox={`0 0 ${width} ${height}`}>
+  <g transform={`translate(${labelSpace} 0)`}>
+    {#each report.candidates as candidate, i}
+      <g
+        class={candidate.winner === true ? '' : 'eliminated'}
+        transform={`translate(0 ${outerHeight * (i + 0.5)})`}
+      >
+        <text font-size="12" text-anchor="end" dominant-baseline="middle">
+          {candidate.name}
+        </text>
+        <g transform={`translate(5 ${-innerHeight / 2 - 1})`}>
+          <rect
+            class="votes"
+            height={innerHeight}
+            width={scale * candidate.votes}
+            use:tooltip={`<strong>${candidate.name}</strong>
+            received <strong>${candidate.votes.toLocaleString()}</strong> votes, ${(
+              (candidate.votes / ballotsCast) *
+              100
+            ).toFixed(1)}% of the total.</g>`}
+          />
+        </g>
+        {#if candidate.winner != true}
+          <text
+            font-size="12"
+            dominant-baseline="middle"
+            x={10 + scale * candidate.votes}
+          >
+            Eliminated
+          </text>
+        {/if}
+      </g>
+    {/each}
+  </g>
+</svg>
 
-  .transfer {
-    fill: #e7ada0;
+<style>
+  .votes {
+    fill: #7EC242;
   }
 
   .eliminated {
     opacity: 30%;
   }
 </style>
-
-<svg width="100%" viewBox={`0 0 ${width} ${height}`}>
-  <g transform={`translate(${labelSpace} 0)`}>
-    {#each candidateVotes as votes, i}
-      <g
-        class={votes.roundEliminated === null ? '' : 'eliminated'}
-        transform={`translate(0 ${outerHeight * (i + 0.5)})`}>
-        <text font-size="12" text-anchor="end" dominant-baseline="middle">
-          {getCandidate(votes.candidate).name}
-        </text>
-        <g transform={`translate(5 ${-innerHeight / 2 - 1})`}>
-          <rect
-            class="firstRound"
-            height={innerHeight}
-            width={scale * votes.firstRoundVotes}
-            use:tooltip={`<strong>${getCandidate(votes.candidate).name}</strong>
-            received <strong>${votes.firstRoundVotes.toLocaleString()}</strong> votes.`} />
-          <rect
-            class="transfer"
-            x={scale * votes.firstRoundVotes}
-            height={innerHeight}
-            width={scale * votes.transferVotes}
-            use:tooltip={`<strong>${getCandidate(votes.candidate).name}</strong>
-            received <strong>${votes.transferVotes.toLocaleString()}</strong> transfer votes.`}
-            />
-        </g>
-        {#if votes.roundEliminated !== null}
-            <text
-            font-size="12"
-            dominant-baseline="middle"
-            x={10 + scale * (votes.firstRoundVotes + votes.transferVotes)}>
-            Eliminated
-            </text>
-        {/if}
-      </g>
-    {/each}
-  </g>
-</svg>

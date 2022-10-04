@@ -21,7 +21,6 @@ export interface IContestIndexEntry {
     name: string
     winners: string
     numCandidates: number
-    numRounds: number
 }
 
 // report.json
@@ -30,34 +29,9 @@ export interface IContestReport {
     info: IElectionInfo
     ballotCount: number
     candidates: ICandidate[]
-    rounds: ITabulatorRound[]
     winners: CandidateId[]
     condorcet?: CandidateId
-    smithSet: CandidateId[]
     numCandidates: number
-    totalVotes: ICandidateVotes[]
-    pairwisePreferences: ICandidatePairTable
-    firstAlternate: ICandidatePairTable
-    firstFinal: ICandidatePairTable
-}
-
-export interface ICandidatePairTable {
-    rows: Allocatee[]
-    cols: Allocatee[]
-    entries: ICandidatePairEntry[][]
-}
-
-export interface ICandidatePairEntry {
-    frac: number
-    numerator: number
-    denominator: number
-}
-
-export interface ICandidateVotes {
-    candidate: CandidateId
-    firstRoundVotes: number
-    transferVotes: number
-    roundEliminated?: number
 }
 
 export interface IElectionInfo {
@@ -78,23 +52,6 @@ export interface IElectionInfo {
 export interface ICandidate {
     name: string
     writeIn: boolean
-}
-
-export interface ITabulatorRound {
-    allocations: ITabulatorAllocation[]
-    undervote: number
-    overvote: number
-    continuingBallots: number
-    transfers: Transfer[]
-}
-
-export interface ITabulatorAllocation {
-    allocatee: Allocatee
     votes: number
-}
-
-export interface Transfer {
-    from: CandidateId
-    to: Allocatee
-    count: number
+    winner: boolean
 }

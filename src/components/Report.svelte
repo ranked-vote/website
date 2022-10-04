@@ -5,28 +5,18 @@
     IContestReport,
     Allocatee,
     ICandidate,
-    ICandidatePairEntry,
   } from '../report_types';
   import VoteCounts from './report_components/VoteCounts.svelte';
-  import CandidatePairTable from './report_components/CandidatePairTable.svelte';
-  import { EXHAUSTED } from './candidates';
 
   import { onMount, setContext } from 'svelte';
 
   export let report: IContestReport;
 
   function getCandidate(cid: Allocatee): ICandidate {
-    if (cid == 'X') {
-      return { name: 'Exhausted', writeIn: false };
-    } else {
       return report.candidates[cid];
-    }
   }
 
   function getWinners(cids: Allocatee[]): ICandidate[] {
-    if (cids[0] == 'X') {
-      return [{ name: 'Exhausted', writeIn: false }];
-    }
     if (cids.length == 1) {
       return [report.candidates[0]];
     }
@@ -63,6 +53,8 @@
       months[date.getUTCMonth()]
     } ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
   }
+
+  const sumVotes = report.candidates.map((candidate) => candidate.votes).reduce((a, b) => a + b);
 </script>
 
 <div class="row">
@@ -107,40 +99,11 @@
       <strong>{report.numCandidates}</strong>
       {#if report.numCandidates == 1}candidate{:else}candidates{/if}.
     </p>
-    <!-- <p>
-      {#if report.winner == report.condorcet}
-        <strong>{getCandidate(report.winner).name}</strong> was also the <a href="https://en.wikipedia.org/wiki/Condorcet_method">Condorcet winner</a>.
-      {:else}
-        <strong>{getCandidate(report.condorcet).name}</strong> was the <a href="https://en.wikipedia.org/wiki/Condorcet_method">Condorcet winner</a>.
-      {/if}
-    </p> -->
+    <p>
+      There were <strong>{report.ballotCount.toLocaleString()}</strong> ballots, with <strong>{sumVotes.toLocaleString()}</strong> approvals. There was an average of <strong>{(sumVotes / report.ballotCount).toFixed(1)}</strong> approvals per ballot in this race.
+    </p>
   </div>
   <div class="rightCol">
-    <VoteCounts candidateVotes={report.totalVotes} />
+    <VoteCounts report={report} />
   </div>
 </div>
-
-{#if report.numCandidates > 1 && report.pairwisePreferences}
-  <div class="row">
-    <div class="leftCol">
-      <h2>Pairwise Approval</h2>
-      <p>
-        For every pair of candidates, this table shows the correlation of votes between candidates.
-      </p>
-    </div>
-
-    <div class="rightCol">
-      <CandidatePairTable
-        data={report.pairwisePreferences}
-        rowLabel="Preferred Candidate"
-        colLabel="Less-preferred Candidate"
-        generateTooltip={(row, col, entry) => `
-        Of the <strong>${entry.denominator.toLocaleString()}</strong> voters
-        who expressed a preference, <strong>${Math.round(entry.frac * 1000) / 10}%</strong>
-        (<strong>${entry.numerator.toLocaleString()}</strong>) preferred
-        <strong>${getCandidate(row).name}</strong> to <strong>${getCandidate(col).name}</strong>.
-      `}
-      />
-    </div>
-  </div>
-{/if}
