@@ -1,4 +1,5 @@
 <script type="ts">
+  import { base } from '$app/paths';
   import type { IElectionIndexEntry } from "../report_types";
 
   import index from "$lib/reports/index.json"
@@ -26,7 +27,7 @@
         </div>
         {#each election.contests as contest}
           <div class="race">
-            <a href="/report/{election.path}/{contest.office}">
+            <a href="{base}/report/{election.path}/{contest.office}">
               <div class="title">
                 <strong>{contest.officeName}</strong>
                 {contest.winners}

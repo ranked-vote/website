@@ -45,7 +45,7 @@ const config = {
     outDir: '.svelte-kit',
     paths: {
       assets: '',
-      base: '',
+      base: '/approval-vote',
     },
     prerender: {
       concurrency: 1,

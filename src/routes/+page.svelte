@@ -1,6 +1,7 @@
 
 
 <script>
+  import { base } from '$app/paths';
   import ElectionIndex from "../components/ElectionIndex.svelte";
   export let elections;
 </script>
@@ -24,7 +25,7 @@
       <strong>approval.vote</strong> is a project of
          <a href="https://felixsargent.com">Felix Sargent</a>. It is a fork of <a href="https://paulbutler.org">Paul Butler's</a> <a href="https://ranked.vote">ranked.vote</a>.
         It is non-partisan and has received no outside funding.
-      For more information, see <a href="/about">the about page</a>.
+      For more information, see <a href="{ base }/about">the about page</a>.
     </p>
   </div>
 
