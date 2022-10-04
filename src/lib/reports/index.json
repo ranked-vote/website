@@ -1,0 +1,18 @@
+{
+	"elections": [ {
+		"path": "us/nd/fargo/2020/06",
+		"jurisdictionName": "Fargo",
+		"electionName": "City Commissioner",
+		"date": "2020-06-09",
+		"contests": [
+		  {
+		    "office": "cc",
+		    "officeName": "City Commissioner",
+		    "name": "City Commissioner",
+		    "winners": "John Strand, Arlette Preston",
+		    "numCandidates": 7
+		  }
+		]
+	      }
+	     ]
+      }

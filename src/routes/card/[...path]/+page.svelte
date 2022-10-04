@@ -1,19 +1,8 @@
-<script context="module">
-  export async function preload(page, session) {
-    let {path} = page.params;
-    let result = await this.fetch(`/api/${path.join('/')}/report.json`);
-    let report = await result.json();
-    return {report};
-  }
-</script>
-
 <script>
-  // TODO: this could be a TS script once this Sapper issue is closed:
-  // https://github.com/sveltejs/sapper/pull/1222
-  export let report;
-  import Report from "../../components/Report.svelte";
-  import Sankey from "../../components/report_components/Sankey.svelte";
-  import VoteCounts from "../../components/report_components/VoteCounts.svelte";
+  export let data;
+  const report = data.report;
+  import Report from "../../../components/Report.svelte";
+  import VoteCounts from "../../../components/report_components/VoteCounts.svelte";
 
   import { onMount, setContext } from "svelte";
 
@@ -44,9 +33,7 @@
       </h3>
     </div>
 
-    <div class="segment">
-      <Sankey rounds={report.rounds} />
-    </div>
+
 
     <div class="segment">
         <VoteCounts candidateVotes={report.totalVotes} />
