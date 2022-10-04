@@ -1,5 +1,6 @@
 <script>
   export let data;
+  import { base } from '$app/paths';
   const report = data.report;
   import Report from "../../../components/Report.svelte";
   import VoteCounts from "../../../components/report_components/VoteCounts.svelte";
@@ -20,13 +21,13 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="/card.css" />
+    <link rel="stylesheet" href="{base}/card.css" />
 </svelte:head>
 
 <div class="card">
     <div class="electionHeader">
       <h3>
-        <a href="/">approval.vote</a>
+        <a href="{base}/">approval.vote</a>
         //
         <strong>{report.info.jurisdictionName}</strong>
         {report.info.officeName}

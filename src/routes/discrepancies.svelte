@@ -1,40 +1,20 @@
+<script>
+  import { base } from '$app/paths';
+</script>
 <title>approval.vote: Understanding Discrepancies</title>
 
 <div class="container">
 <div class="description">
-  <h1><a href="/">approval.vote</a>: Understanding Discrepancies</h1>
+  <h1><a href="{base}/">approval.vote</a>: Understanding Discrepancies</h1>
 </div>
 
 <p>
   All of the analysis that goes into approval.vote reports is based only
-  on ballot-level data. This includes the IRV tabulation, which backs
-  the “Runoff Rounds” section.
+  on ballot-level data.
 </p>
 
 <p>
   In some cases, these tabulations don't match the official tabulations.
-  There are two main reasons for this. First, there are multiple ways to
-  tabluate an instant-runoff election. The main decisions are:
-</p>
-
-<ul>
-  <li>
-    Whether you remove a single candidate on each round, or all remaining
-    candidates who are mathematically unable to win.
-  </li>
-  <li>
-    Whether you stop eliminations when it is clear that one candidate has
-    won, or whether you continue eliminating until only two candidates remain.
-  </li>
-</ul>
-
-<p>
-  These result in the same winner, but the count at each round may differ.
-  For consistency and information density, we tabulate all elections the same
-  way: all candidates who are unable to win are removed at each round, and
-  we continue until two candidates remain.
-</p>
-
 <p>
   Another source of discrepancies is the handling of undervotes/overvotes and
   write-ins.

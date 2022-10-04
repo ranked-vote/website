@@ -1,4 +1,6 @@
 <script type="ts">
+  import { base } from '$app/paths';
+
   import type {
     IContestReport,
     Allocatee,
@@ -67,7 +69,7 @@
   <p class="description" />
   <div class="electionHeader">
     <h3>
-      <a href="/">approval.vote</a>
+      <a href="{base}/">approval.vote</a>
       //
       <strong>{report.info.jurisdictionName}</strong>
       {report.info.officeName}
