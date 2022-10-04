@@ -36,7 +36,6 @@ const config = {
       lib: 'src/lib',
       params: 'src/params',
       routes: 'src/routes',
-      serviceWorker: 'src/service-worker',
       appTemplate: 'src/app.html',
       errorTemplate: 'src/error.html',
     },
@@ -56,7 +55,7 @@ const config = {
       origin: 'http://sveltekit-prerender',
     },
     serviceWorker: {
-      register: true,
+      register: false,
       files: (filepath) => !/\.DS_Store/.test(filepath),
     },
     trailingSlash: 'never',
