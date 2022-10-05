@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Ward 27",
+    "date": "2021-03-02",
+    "jurisdictionPath": "us/mo/stl",
+    "electionPath": "2021/03",
+    "office": "wd27",
+    "officeName": "Alderman - 27th Ward",
+    "jurisdictionName": "St Louis, MO",
+    "electionName": "Primary Election",
+    "website": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Mar21-Final-Official-Summary.pdf"
+  },
+  "ballotCount": 1133,
+  "candidates": [
+    {
+      "name": "Pamela Boyd",
+      "candidate_type": "Regular",
+      "votes": 603,
+      "winner": true
+    },
+    {
+      "name": "Chris Carter",
+      "candidate_type": "Regular",
+      "votes": 518,
+      "winner": true
+    },
+    {
+      "name": "Mary Ann Jackson",
+      "candidate_type": "Regular",
+      "votes": 161,
+      "winner": false
+    }
+  ],
+  "winners": [0, 1],
+  "numberOfWinners": 2,
+  "condorcet": 0
+}

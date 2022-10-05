@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Ward 21",
+    "date": "2021-03-02",
+    "jurisdictionPath": "us/mo/stl",
+    "electionPath": "2021/03",
+    "office": "wd21",
+    "officeName": "Alderman - 21st Ward",
+    "jurisdictionName": "St Louis, MO",
+    "electionName": "Primary Election",
+    "website": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Mar21-Final-Official-Summary.pdf"
+  },
+  "ballotCount": 1409,
+  "candidates": [
+    {
+      "name": "John Muhammad",
+      "candidate_type": "Regular",
+      "votes": 833,
+      "winner": true
+    },
+    {
+      "name": "Laura Keys",
+      "candidate_type": "Regular",
+      "votes": 530,
+      "winner": true
+    },
+    {
+      "name": "Ticharwa Masimba",
+      "candidate_type": "Regular",
+      "votes": 217,
+      "winner": false
+    },
+
+    {
+      "name": "Melinda Long",
+      "candidate_type": "Regular",
+      "votes": 144,
+      "winner": false
+    },
+    {
+      "name": "Barbara Lane",
+      "candidate_type": "Regular",
+      "votes": 129,
+      "winner": false
+    },
+    {
+      "name": "Tavon Brooks",
+      "candidate_type": "Regular",
+      "votes": 90,
+      "winner": false
+    }
+  ],
+  "winners": [0, 1],
+  "numberOfWinners": 2,
+  "condorcet": 0
+}

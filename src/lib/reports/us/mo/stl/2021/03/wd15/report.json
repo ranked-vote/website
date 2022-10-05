@@ -1,0 +1,36 @@
+{
+  "info": {
+    "name": "Ward 15",
+    "date": "2021-03-02",
+    "jurisdictionPath": "us/mo/stl",
+    "electionPath": "2021/03",
+    "office": "wd15",
+    "officeName": "Alderman - 15th Ward",
+    "jurisdictionName": "St Louis, MO",
+    "electionName": "Primary Election",
+    "website": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Mar21-Final-Official-Summary.pdf"
+  },
+  "ballotCount": 2350,
+  "candidates": [
+    {
+      "name": "Megan Green",
+      "candidate_type": "Regular",
+      "votes": 1745,
+      "winner": true
+    },
+    {
+      "name": "Jennifer Florida",
+      "candidate_type": "Regular",
+      "votes": 722,
+      "winner": true
+    },
+    {
+      "name": "Alexander Gremp",
+      "candidate_type": "Regular",
+      "votes": 169,
+      "winner": false
+    }
+  ],
+  "winners": [0, 1],
+  "numberOfWinners": 2
+}

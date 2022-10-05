@@ -1,9 +1,10 @@
 {
   "elections": [
+    
     {
       "path": "us/nd/fargo/2020/06",
       "jurisdictionName": "Fargo",
-      "electionName": "City Commissioner",
+      "electionName": "Primary Election",
       "date": "2020-06-09",
       "contests": [
         {
@@ -18,7 +19,7 @@
     {
       "path": "us/mo/stl/2021/03",
       "jurisdictionName": "St Louis",
-      "electionName": "Mayor",
+      "electionName": "Primary Election",
       "date": "2021-03-08",
       "contests": [
         {
@@ -27,8 +28,111 @@
           "name": "Mayor",
           "winners": "Tishaura Jones, Cara Spencer",
           "numCandidates": 4
+        },
+        {
+          "office": "comptroller",
+          "officeName": "Comptroller",
+          "winners": "Darlene Green",
+          "numCandidates": 1
+        },
+        {
+          "office": "wd1",
+          "officeName": "Ward 1 - Alderman",
+          "winners": "Sharon Tyus, Yolanda Brown",
+          "numCandidates": 3
+        },
+        {
+          "office": "wd3",
+          "officeName": "Ward 3 - Alderman",
+          "winners": "Brandon Bosley, Herdosia Bentum",
+          "numCandidates": 2
+        },
+        {
+          "office": "wd4",
+          "officeName": "Ward 4 - Alderman",
+          "winners": "Dwinderlin Evans, Edward McFowland",
+          "numCandidates": 3
+        },
+        {
+          "office": "wd5",
+          "officeName": "Ward 5 - Alderman",
+          "winners": "Tammika Hubbard, James Page",
+          "numCandidates": 2
+        },
+        {
+          "office": "wd7",
+          "officeName": "Ward 7 - Alderman",
+          "winners": "Jack Coatar, Shedrick Kelley",
+          "numCandidates": 2
+        },
+        {
+          "office": "wd9",
+          "officeName": "Ward 9 - Alderman",
+          "winners": "Dan Guenther, Ken Ortmann",
+          "numCandidates": 2
+        },
+        {
+          "office": "wd11",
+          "officeName": "Ward 11 - Alderman",
+          "winners": "Sarah Martin",
+          "numCandidates": 1
+        },
+        {
+          "office": "wd12",
+          "officeName": "Ward 12 - Alderman",
+          "winners": "Vicky Grass, Bill Stephens",
+          "numCandidates": 3
+        },
+        {
+          "office": "wd13",
+          "officeName": "Ward 13 - Alderman",
+          "winners": "Anne Schweitzer, Beth Murphy",
+          "numCandidates": 2
+        },
+        {
+          "office": "wd15",
+          "officeName": "Ward 15 - Alderman",
+          "winners": "Megan Green, Jennifer Florida",
+          "numCandidates": 3
+        },
+        {
+          "office": "wd17",
+          "officeName": "Ward 17 - Alderman",
+          "winners": "Michelle Sherod, Tina Pihl",
+          "numCandidates": 3
+        },
+        {
+          "office": "wd19",
+          "officeName": "Ward 19 - Alderman",
+          "winners": "Marlene Davis, Cleo Willis",
+          "numCandidates": 2
+        },
+        {
+          "office": "wd21",
+          "officeName": "Ward 21 - Alderman",
+          "winners": "John Muhammad, Laura Keys",
+          "numCandidates": 6
+        },
+        {
+          "office": "wd23",
+          "officeName": "Ward 23 - Alderman",
+          "winners": "Joseph Vaccaro",
+          "numCandidates": 1
+        },
+        {
+          "office": "wd25",
+          "officeName": "Ward 25 - Alderman",
+          "winners": "Shane Cohn",
+          "numCandidates": 1
+        },
+        {
+          "office": "wd27",
+          "officeName": "Ward 27 - Alderman",
+          "winners": "Pamela Boyd, Chris Carter",
+          "numCandidates": 3
         }
       ]
     }
+  
   ]
 }

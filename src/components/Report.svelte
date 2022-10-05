@@ -95,8 +95,8 @@
       {#if report.winners.length == 1}
         was the winner out of
       {:else}were the winners out of{/if}
-      <strong>{report.numCandidates}</strong>
-      {#if report.numCandidates == 1}candidate{:else}candidates{/if}.
+      <strong>{report.candidates.length}</strong>
+      {#if report.candidates.length == 1}candidate{:else}candidates{/if}.
     </p>
     <p>
       There were <strong>{report.ballotCount.toLocaleString()}</strong> ballots, with <strong>{sumVotes.toLocaleString()}</strong> approvals. There was an average of <strong>{(sumVotes / report.ballotCount).toFixed(1)}</strong> approvals per ballot in this race.
