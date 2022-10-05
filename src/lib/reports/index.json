@@ -1,6 +1,27 @@
 {
   "elections": [
-    
+    {
+      "path": "us/nd/fargo/2022/06",
+      "jurisdictionName": "Fargo",
+      "electionName": "Primary Election",
+      "date": "2022-06-14",
+      "contests": [
+        {
+          "office": "mayor",
+          "officeName": "Mayor",
+          "name": "Mayor",
+          "winners": "Timothy Mahoney",
+          "numCandidates": 7
+        },
+        {
+          "office": "cc",
+          "officeName": "City Commissioner",
+          "name": "City Commissioner",
+          "winners": "Denise M Kolpack, Dave Piepkorn",
+          "numCandidates": 15
+        }
+      ]
+    },
     {
       "path": "us/nd/fargo/2020/06",
       "jurisdictionName": "Fargo",
@@ -13,6 +34,35 @@
           "name": "City Commissioner",
           "winners": "John Strand, Arlette Preston",
           "numCandidates": 7
+        }
+      ]
+    },
+    {
+      "path": "us/mo/stl/2022/09",
+      "jurisdictionName": "St Louis",
+      "electionName": "Special Primary Election",
+      "date": "2022-09-13",
+      "contests": [
+        {
+          "office": "presidentboa",
+          "officeName": "President - Board of Aldermen",
+          "name": "President - Board of Aldermen",
+          "winners": "Megan Green, Jack Coatar",
+          "numCandidates": 7
+        },
+        {
+          "office": "wd21",
+          "officeName": "Ward 21 - Alderman",
+          "name": "Ward 21 - Alderman",
+          "winners": "Laura Keys, Joann Williams",
+          "numCandidates": 4
+        },
+        {
+          "office": "wd22",
+          "officeName": "Ward 22 - Alderman",
+          "name": "Ward 22 - Alderman",
+          "winners": "Tonya Finley-McCaw, Norma Walker",
+          "numCandidates": 2
         }
       ]
     },
@@ -133,6 +183,5 @@
         }
       ]
     }
-  
   ]
 }

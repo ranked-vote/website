@@ -1,0 +1,62 @@
+{
+	"info": {
+	  "name": "Mayor",
+	  "date": "2022-06-14",
+	  "jurisdictionPath": "us/nd/fargo",
+	  "electionPath": "2022/06",
+	  "office": "mayor",
+	  "officeName": "Mayor",
+	  "jurisdictionName": "Fargo, ND",
+	  "electionName": "Primary Election",
+	  "website": "https://results.sos.nd.gov/resultsSW.aspx?text=Race&type=CIALL&map=CTY&area=Fargo&name=Fargo&eid=325"
+	},
+	"ballotCount": 15090,
+	"candidates": [
+	  {
+	    "name": "Timothy Mahoney",
+	    "candidate_type": "Regular",
+	    "votes": 9755,
+	    "winner":true
+	  },
+	  {
+	    "name": "Arlette Preston",
+	    "candidate_type": "Regular",
+	    "votes": 4837,
+	    "winner":true
+	  },
+	  {
+	    "name": "Shannon Roers Jones",
+	    "candidate_type": "Regular",
+	    "votes": 3714
+	  },
+	  {
+	    "name": "Hukun Dabar",
+	    "candidate_type": "Regular",
+	    "votes": 2729
+	  },
+	  {
+	    "name": "Michael E Borgie",
+	    "candidate_type": "Regular",
+	    "votes": 1353
+	  },
+	  {
+	    "name": "Sheri L Fercho",
+	    "candidate_type": "Regular",
+	    "votes": 924
+	  },
+	  {
+	    "name": "Dustin Thomas Elliott",
+	    "candidate_type": "Regular",
+	    "votes": 575
+	  },
+	  {
+	    "name": "write-in",
+	    "candidate_type": "Regular",
+	    "votes": 36
+	  }
+	],
+	"winners": [0],
+	"condorcet": 0,
+	"numCandidates": 7
+      }
+      
