@@ -51,7 +51,7 @@ export interface IElectionInfo {
 
 export interface ICandidate {
     name: string
-    writeIn: boolean
+    writeIn?: boolean
     votes: number
     winner?: boolean
 }

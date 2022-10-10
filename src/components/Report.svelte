@@ -55,6 +55,8 @@
   }
 
   const sumVotes = report.candidates.map((candidate) => candidate.votes).reduce((a, b) => a + b);
+
+  const numCandidates = report.candidates.filter(candidate => !candidate.writeIn).length
 </script>
 
 <div class="row">
@@ -95,8 +97,8 @@
       {#if report.winners.length == 1}
         was the winner out of
       {:else}were the winners out of{/if}
-      <strong>{report.candidates.length}</strong>
-      {#if report.candidates.length == 1}candidate{:else}candidates{/if}.
+      <strong>{numCandidates}</strong>
+      {#if numCandidates == 1}candidate{:else}candidates{/if}.
     </p>
     <p>
       There were <strong>{report.ballotCount.toLocaleString()}</strong> ballots, with <strong>{sumVotes.toLocaleString()}</strong> approvals. There was an average of <strong>{(sumVotes / report.ballotCount).toFixed(1)}</strong> approvals per ballot in this race.

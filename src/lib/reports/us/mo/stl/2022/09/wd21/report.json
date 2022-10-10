@@ -38,8 +38,8 @@
 	  }
 	  ,
 	  {
-	    "name": "Write-In Votes",
-	    "candidate_type": "Regular",
+	    "name": "write-in",
+	    "writeIn": true,
 	    "votes": 15,
 	    "winner": false
 	  }

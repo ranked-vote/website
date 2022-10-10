@@ -22,7 +22,7 @@
 	    "name": "Arlette Preston",
 	    "candidate_type": "Regular",
 	    "votes": 4837,
-	    "winner":true
+	    "winner":false
 	  },
 	  {
 	    "name": "Shannon Roers Jones",
@@ -51,7 +51,7 @@
 	  },
 	  {
 	    "name": "write-in",
-	    "candidate_type": "Regular",
+	    "writeIn": true,
 	    "votes": 36
 	  }
 	],

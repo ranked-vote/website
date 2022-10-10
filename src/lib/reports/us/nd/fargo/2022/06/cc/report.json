@@ -8,7 +8,7 @@
     "officeName": "City Commissioner",
     "jurisdictionName": "Fargo, ND",
     "electionName": "Primary Election",
-    "website": "https://results.sos.nd.gov/resultsSW.aspx?text=Race&type=CIALL&map=CTY&area=Fargo&name=Fargo&eid=312"
+    "website": "https://results.sos.nd.gov/resultsSW.aspx?text=Race&type=CIALL&map=CTY&area=Fargo&name=Fargo&eid=325"
   },
   "ballotCount": 15090,
   "candidates": [
@@ -91,7 +91,7 @@
     },
     {
       "name": "write-in",
-      "candidate_type": "Regular",
+      "writeIn": true,
       "votes": 40
     }
   ],
