@@ -14,38 +14,32 @@
   "candidates": [
     {
       "name": "John Muhammad",
-      "candidate_type": "Regular",
       "votes": 833,
       "winner": true
     },
     {
       "name": "Laura Keys",
-      "candidate_type": "Regular",
       "votes": 530,
       "winner": true
     },
     {
       "name": "Ticharwa Masimba",
-      "candidate_type": "Regular",
       "votes": 217,
       "winner": false
     },
 
     {
       "name": "Melinda Long",
-      "candidate_type": "Regular",
       "votes": 144,
       "winner": false
     },
     {
       "name": "Barbara Lane",
-      "candidate_type": "Regular",
       "votes": 129,
       "winner": false
     },
     {
       "name": "Tavon Brooks",
-      "candidate_type": "Regular",
       "votes": 90,
       "winner": false
     }

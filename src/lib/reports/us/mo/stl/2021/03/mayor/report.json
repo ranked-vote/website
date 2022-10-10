@@ -14,25 +14,21 @@
   "candidates": [
     {
       "name": "Tishaura Jones",
-      "candidate_type": "Regular",
       "votes": 25388,
       "winner": true
     },
     {
       "name": "Cara Spencer",
-      "candidate_type": "Regular",
       "votes": 20659,
       "winner": true
     },
     {
       "name": "Lewis Reed",
-      "candidate_type": "Regular",
       "votes": 17186,
       "winner": false
     },
     {
       "name": "Andrew Jones",
-      "candidate_type": "Regular",
       "votes": 6428,
       "winner": false
     }

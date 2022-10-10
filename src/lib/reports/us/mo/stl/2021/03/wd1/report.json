@@ -14,20 +14,17 @@
   "candidates": [
     {
       "name": "Sharon Tyus",
-      "candidate_type": "Regular",
       "votes": 700,
       "winner": true
     },
     {
       "name": "Yolanda Brown",
-      "candidate_type": "Regular",
       "votes": 528,
       "winner": true
     },
 
     {
       "name": "Loren Watt",
-      "candidate_type": "Regular",
       "votes": 60,
       "winner": false
     }

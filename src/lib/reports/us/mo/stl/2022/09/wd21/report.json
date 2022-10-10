@@ -14,25 +14,21 @@
 	"candidates": [
 	  {
 	    "name": "Laura Keys",
-	    "candidate_type": "Regular",
 	    "votes": 671,
 	    "winner": true
 	  },
 	  {
 	    "name": "Joann Williams",
-	    "candidate_type": "Regular",
 	    "votes": 376,
 	    "winner": true
 	  },
 	  {
 	    "name": "Melinda Long",
-	    "candidate_type": "Regular",
 	    "votes": 97,
 	    "winner": false
 	  },
 	  {
 	    "name": "Ebony Moore",
-	    "candidate_type": "Regular",
 	    "votes": 27,
 	    "winner": false
 	  }

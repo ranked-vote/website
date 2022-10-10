@@ -14,13 +14,11 @@
   "candidates": [
     {
       "name": "Dan Guenther",
-      "candidate_type": "Regular",
       "votes": 1227,
       "winner": true
     },
     {
       "name": "Ken Ortmann",
-      "candidate_type": "Regular",
       "votes": 608,
       "winner": true
     }

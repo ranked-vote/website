@@ -14,19 +14,16 @@
   "candidates": [
     {
       "name": "Dwinderlin Evans",
-      "candidate_type": "Regular",
       "votes": 490,
       "winner": true
     },
     {
       "name": "Edward McFowland",
-      "candidate_type": "Regular",
       "votes": 368,
       "winner": true
     },
     {
       "name": "Leroy Carter",
-      "candidate_type": "Regular",
       "votes": 318,
       "winner": false
     }

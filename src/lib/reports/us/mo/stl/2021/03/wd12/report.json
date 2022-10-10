@@ -14,19 +14,16 @@
   "candidates": [
     {
       "name": "Vicky Grass",
-      "candidate_type": "Regular",
       "votes": 1025,
       "winner": true
     },
     {
       "name": "Bill Stephens",
-      "candidate_type": "Regular",
       "votes": 761,
       "winner": true
     },
     {
       "name": "Joe Rusch",
-      "candidate_type": "Regular",
       "votes": 711,
       "winner": false
     }

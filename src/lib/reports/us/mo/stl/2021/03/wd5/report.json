@@ -14,13 +14,11 @@
   "candidates": [
     {
       "name": "Tammika Hubbard",
-      "candidate_type": "Regular",
       "votes": 621,
       "winner": true
     },
     {
       "name": "James Page",
-      "candidate_type": "Regular",
       "votes": 406,
       "winner": true
     }

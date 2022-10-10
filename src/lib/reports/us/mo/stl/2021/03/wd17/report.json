@@ -14,19 +14,16 @@
   "candidates": [
     {
       "name": "Michelle Sherod",
-      "candidate_type": "Regular",
       "votes": 1195,
       "winner": true
     },
     {
       "name": "Tina Pihl",
-      "candidate_type": "Regular",
       "votes": 800,
       "winner": true
     },
     {
       "name": "Don De Vivo",
-      "candidate_type": "Regular",
       "votes": 106,
       "winner": false
     }

@@ -14,13 +14,11 @@
   "candidates": [
     {
       "name": "Jack Coatar",
-      "candidate_type": "Regular",
       "votes": 1155,
       "winner": true
     },
     {
       "name": "Shedrick Kelley",
-      "candidate_type": "Regular",
       "votes": 886,
       "winner": true
     }

@@ -14,13 +14,11 @@
   "candidates": [
     {
       "name": "Marlene Davis",
-      "candidate_type": "Regular",
       "votes": 772,
       "winner": true
     },
     {
       "name": "Cleo Willis",
-      "candidate_type": "Regular",
       "votes": 260,
       "winner": true
     }

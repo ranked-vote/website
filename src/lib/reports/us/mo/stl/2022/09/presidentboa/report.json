@@ -14,13 +14,11 @@
 	"candidates": [
 	  {
 	    "name": "Megan Green",
-	    "candidate_type": "Regular",
 	    "votes": 6535,
 	    "winner": true
 	  },
 	  {
 	    "name": "Jack Coatar",
-	    "candidate_type": "Regular",
 	    "votes": 5631,
 	    "winner": true
 	  }

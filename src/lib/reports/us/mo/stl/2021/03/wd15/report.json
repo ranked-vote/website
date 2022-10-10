@@ -14,19 +14,16 @@
   "candidates": [
     {
       "name": "Megan Green",
-      "candidate_type": "Regular",
       "votes": 1745,
       "winner": true
     },
     {
       "name": "Jennifer Florida",
-      "candidate_type": "Regular",
       "votes": 722,
       "winner": true
     },
     {
       "name": "Alexander Gremp",
-      "candidate_type": "Regular",
       "votes": 169,
       "winner": false
     }

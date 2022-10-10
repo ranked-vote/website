@@ -14,39 +14,32 @@
 	"candidates": [
 	  {
 	    "name": "Timothy Mahoney",
-	    "candidate_type": "Regular",
 	    "votes": 9755,
 	    "winner":true
 	  },
 	  {
 	    "name": "Arlette Preston",
-	    "candidate_type": "Regular",
 	    "votes": 4837,
 	    "winner":false
 	  },
 	  {
 	    "name": "Shannon Roers Jones",
-	    "candidate_type": "Regular",
 	    "votes": 3714
 	  },
 	  {
 	    "name": "Hukun Dabar",
-	    "candidate_type": "Regular",
 	    "votes": 2729
 	  },
 	  {
 	    "name": "Michael E Borgie",
-	    "candidate_type": "Regular",
 	    "votes": 1353
 	  },
 	  {
 	    "name": "Sheri L Fercho",
-	    "candidate_type": "Regular",
 	    "votes": 924
 	  },
 	  {
 	    "name": "Dustin Thomas Elliott",
-	    "candidate_type": "Regular",
 	    "votes": 575
 	  },
 	  {

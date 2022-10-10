@@ -14,13 +14,11 @@
   "candidates": [
     {
       "name": "Brandon Bosley",
-      "candidate_type": "Regular",
       "votes": 654,
       "winner": true
     },
     {
       "name": "Herdosia Bentum",
-      "candidate_type": "Regular",
       "votes": 236,
       "winner": true
     }

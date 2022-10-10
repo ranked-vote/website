@@ -14,13 +14,11 @@
   "candidates": [
     {
       "name": "Anne Schweitzer",
-      "candidate_type": "Regular",
       "votes": 1318,
       "winner": true
     },
     {
       "name": "Beth Murphy",
-      "candidate_type": "Regular",
       "votes": 744,
       "winner": true
     }

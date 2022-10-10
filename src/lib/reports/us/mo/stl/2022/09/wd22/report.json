@@ -14,13 +14,11 @@
 	"candidates": [
 	  {
 	    "name": "Tonya Finley-McCaw",
-	    "candidate_type": "Regular",
 	    "votes": 252,
 	    "winner": true
 	  },
 	  {
 	    "name": "Norma Walker",
-	    "candidate_type": "Regular",
 	    "votes": 182,
 	    "winner": true
 	  }

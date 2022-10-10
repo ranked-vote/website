@@ -14,19 +14,16 @@
   "candidates": [
     {
       "name": "Pamela Boyd",
-      "candidate_type": "Regular",
       "votes": 603,
       "winner": true
     },
     {
       "name": "Chris Carter",
-      "candidate_type": "Regular",
       "votes": 518,
       "winner": true
     },
     {
       "name": "Mary Ann Jackson",
-      "candidate_type": "Regular",
       "votes": 161,
       "winner": false
     }
