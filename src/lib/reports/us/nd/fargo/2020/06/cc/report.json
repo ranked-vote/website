@@ -49,6 +49,13 @@
       "candidate_type": "Regular",
       "votes": 2976
     }
+    ,
+    {
+      "name": "write-in",
+      "candidate_type": "Regular",
+      "writeIn": true,
+      "votes": 155
+    }
   ],
   "winners": [0,1],
   "condorcet": 0,
