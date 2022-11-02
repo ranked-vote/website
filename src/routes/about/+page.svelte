@@ -41,7 +41,7 @@
 
 <p>
   This website, including
-  visualizations, was created with <a href="https://svelte.dev/">Svelte</a>, and is hosted on <a href="https://www.github.com/">Github</a>.
+  visualizations, was created with <a href="https://svelte.dev/">Svelte</a>, and is hosted on <a href="https://github.com/electionscience/approval-vote">Github Pages</a>.
   The font is <a href="https://github.com/adobe-fonts/source-sans-pro">Source Sans Pro</a>.
 </p>
 </div>
