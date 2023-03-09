@@ -16,12 +16,12 @@
     {
       "name": "John Strand",
       "votes": 10393,
-      "winner":true
+      "winner": true
     },
     {
       "name": "Arlette Preston",
       "votes": 9893,
-      "winner":true
+      "winner": true
     },
     {
       "name": "Tony Grindberg",
@@ -42,15 +42,14 @@
     {
       "name": "Ritchell Aboah",
       "votes": 2976
-    }
-    ,
+    },
     {
       "name": "write-in",
       "writeIn": true,
       "votes": 155
     }
   ],
-  "winners": [0,1],
+  "winners": [0, 1],
   "condorcet": 0,
   "numCandidates": 7
 }
