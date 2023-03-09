@@ -3,6 +3,77 @@
     {
       "contests": [
         {
+          "name": "Ward 1 - Alderman",
+          "numCandidates": 3,
+          "office": "wd1",
+          "officeName": "Ward 1 - Alderman",
+          "winners": "Anne Schweitzer, Tony Kirchner"
+        },
+        {
+          "name": "Ward 2 - Alderman",
+          "numCandidates": 3,
+          "office": "wd2",
+          "officeName": "Ward 2 - Alderman",
+          "winners": "Thomas Oldenburg, Phill Menendez"
+        },
+        {
+          "name": "Ward 4 - Alderman",
+          "numCandidates": 3,
+          "office": "wd4",
+          "officeName": "Ward 4 - Alderman",
+          "winners": "Joseph Vaccaro, Bret Narayan"
+        },
+        {
+          "name": "Ward 7 - Alderman",
+          "numCandidates": 3,
+          "office": "wd7",
+          "officeName": "Ward 7 - Alderman",
+          "winners": "Alisha Sonnier, J.P. Mitchom"
+        },
+        {
+          "name": "Ward 8 - Alderman",
+          "numCandidates": 3,
+          "office": "wd8",
+          "officeName": "Ward 8 - Alderman",
+          "winners": "Cara Spencer, Kenneth Ortmann"
+        },
+        {
+          "name": "Ward 9 - Alderman",
+          "numCandidates": 3,
+          "office": "wd9",
+          "officeName": "Ward 9 - Alderman",
+          "winners": "Michael Browning"
+        },
+        {
+          "name": "Ward 12 - Alderman",
+          "numCandidates": 5,
+          "office": "wd12",
+          "officeName": "Ward 12 - Alderman",
+          "winners": "Sharon Tyus, Tashara Earl"
+        },
+        {
+          "name": "Ward 13 - Alderman",
+          "numCandidates": 3,
+          "office": "wd13",
+          "officeName": "Ward 13 - Alderman",
+          "winners": "Pamela Boyd, Norma Walker"
+        },
+        {
+          "name": "Ward 14 - Alderman",
+          "numCandidates": 4,
+          "office": "wd14",
+          "officeName": "Ward 14 - Alderman",
+          "winners": "Ebony Washington, Rasheen Aldridge"
+        }
+      ],
+      "date": "2023-03-07",
+      "electionName": "Primary Election",
+      "jurisdictionName": "St Louis",
+      "path": "us/mo/stl/2023/03"
+    },
+    {
+      "contests": [
+        {
           "name": "Mayor",
           "numCandidates": 7,
           "office": "mayor",
