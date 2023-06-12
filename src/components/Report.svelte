@@ -5,10 +5,10 @@
     IContestReport,
     Allocatee,
     ICandidate,
-  } from '../report_types';
+  } from "$lib/report_types";
   import VoteCounts from './report_components/VoteCounts.svelte';
 
-  import { onMount, setContext } from 'svelte';
+  import { setContext } from 'svelte';
 
   export let report: IContestReport;
 

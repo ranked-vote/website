@@ -1,6 +1,6 @@
 # Approval.Vote
 
-Reports are stored in ./lib/reports
+Reports are stored in $lib/reports
 
 ## Developing
 

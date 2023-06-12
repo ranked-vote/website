@@ -4,13 +4,13 @@
   let report: IContestReport = data.report;
   let path = data.path;
   import { base } from '$app/paths';
-  import type { IContestReport } from 'src/report_types';
-  import Report from '../../../components/Report.svelte';
+  import type { IContestReport } from "$lib/report_types";
+  import Report from '$lib/components/Report.svelte';
 </script>
 
 <svelte:head>
   <title
-    >approval.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.substr(
+    >approval.vote: {report.info.jurisdictionName} / {report.info.name} / {report.info.date.slice(
       0,
       4
     )}</title

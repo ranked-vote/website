@@ -2,7 +2,7 @@
 
 <script>
   import { base } from '$app/paths';
-  import ElectionIndex from "../components/ElectionIndex.svelte";
+  import ElectionIndex from "$lib/components/ElectionIndex.svelte";
 </script>
 
 <title>approval.vote: detailed reports on approval voting elections.</title>

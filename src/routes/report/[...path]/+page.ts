@@ -6,7 +6,10 @@ export async function load({ params }) {
     eager: true,
   });
   const report = reports[`/src/lib/reports/${params.path}/report.json`];
+  if (!report) {
+    throw error(404, {
+      message: "Not found",
+    });
+  }
   return { report: report, path: params.path };
-
-  throw error(404, "Not found");
 }

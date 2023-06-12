@@ -2,11 +2,8 @@
   import { base } from '$app/paths';
   export let data;
   let report: IContestReport = data.report;
-  import VoteCounts from '../../../components/report_components/VoteCounts.svelte';
-  import type { IContestReport } from '../../../report_types';
-
-  import { onMount, setContext } from 'svelte';
-
+  import VoteCounts from '$lib/components/report_components/VoteCounts.svelte';
+  import type { IContestReport } from "$lib/report_types";
 </script>
 
 <svelte:head>

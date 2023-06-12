@@ -1,43 +1,5 @@
 <script>
-  import VoteCounts from '../../../src/components/report_components/VoteCounts.svelte';
 import { base } from '$app/paths';
-
-
-
-let FargoApproves = {
-  "info": {
-    "name": "Prop D",
-    "date": "2020-11-03",
-    "jurisdictionPath": "us/mo/stl",
-    "electionPath": "2020/11",
-    "office": "Prop D",
-    "officeName": "Prop D",
-    "jurisdictionName": "St Louis, MO",
-    "electionName": "Prop D",
-    "website": "https://www.stlouis-mo.gov/government/departments/board-election-commissioners/documents/election-results/upload/Nov20-Final-Official-Summary.pdf",
-    "notes": ""
-  },
-  "ballotCount": 128202,
-  "candidates": [
-    {
-      "name": "No",
-      "votes": 87369,
-      "winner": true
-    },
-    {
-      "name": "Yes",
-      "votes": 40833	,
-      "winner": false
-    }
-  ],
-  "winners": [0],
-  "numberOfWinners": 1,
-  "condorcet": 0,
-  "numCandidates": 2
-}
-
-
-
 </script>
 
 <title>About approval.vote</title>

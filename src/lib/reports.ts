@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import type { IReportIndex, IContestReport } from "./report_types";
+import type { IReportIndex, IContestReport } from "$lib/report_types";
 
 export function getIndex(): IReportIndex {
   let indexRaw = readFileSync(`$lib/reports/index.json`);

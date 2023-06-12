@@ -1,6 +1,6 @@
 <script type="ts">
   import { base } from '$app/paths';
-  import type { IElectionIndexEntry } from '../report_types';
+  import type { IElectionIndexEntry } from "$lib/report_types";
 
   import index from '$lib/reports/index.json';
   let electionsByYear = new Map<number, IElectionIndexEntry[]>();
