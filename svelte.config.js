@@ -46,19 +46,10 @@ const config = {
       assets: "",
       base: "",
     },
-    prerender: {
-      concurrency: 1,
-      crawl: true,
-      enabled: true,
-      entries: ["*"],
-      onError: "fail",
-      origin: "http://sveltekit-prerender",
-    },
     serviceWorker: {
       register: false,
       files: (filepath) => !/\.DS_Store/.test(filepath),
     },
-    trailingSlash: "never",
     version: {
       name: Date.now().toString(),
       pollInterval: 0,
